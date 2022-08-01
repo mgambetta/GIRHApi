@@ -1,0 +1,111 @@
+---
+openapi: 3.0.0
+info:
+  title: API_Seguridad
+  description: Información para implementar la APISeguridad del módulo GIRHApi
+  contact:
+    name: Martin Gambetta
+    url: https://www.datalogic.com.uy
+    email: m.gambetta@datalogic.com.uy
+  version: "20220728211358"
+servers:
+- url: http://zona2.datalogic.com.uy:8083/GIRH_BandejaEntrada/Api/v2/Seguridad
+paths:
+  /Login:
+    post:
+      tags:
+      - ApiSeguridad.v2
+      operationId: Api.v2.Seguridad.Login__post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Login__postInput'
+        required: false
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Api.v2.LoginSalida'
+        "404":
+          description: Not found
+  /UsuarioObtenerEmpresasHabilitadas:
+    post:
+      tags:
+      - ApiSeguridad.v2
+      operationId: Api.v2.Seguridad.UsuarioObtenerEmpresasHabilitadas__post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UsuarioObtenerEmpresasHabilitadas__postInput'
+        required: false
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Api.v2.UsuarioObtenerEmpresasHabilitadasSalida'
+        "404":
+          description: Not found
+components:
+  schemas:
+    Login__postInput:
+      properties:
+        LoginEntrada:
+          $ref: '#/components/schemas/Api.v2.LoginEntrada'
+    UsuarioObtenerEmpresasHabilitadas__postInput:
+      properties:
+        UsuarioObtenerEmpresasHabilitadasEntrada:
+          $ref: '#/components/schemas/Api.v2.UsuarioObtenerEmpresasHabilitadasEntrada'
+    Api.v2.LoginEntrada:
+      properties:
+        Usuario:
+          type: string
+          description: Usuario
+        Password:
+          type: string
+          description: Password
+    Api.v2.LoginSalida:
+      properties:
+        EjecucionOk:
+          type: boolean
+          description: Ejecucion Ok
+        EjecucionMsg:
+          type: string
+          description: Ejecucion Msg
+        Token:
+          type: string
+          description: Token
+    Api.v2.UsuarioObtenerEmpresasHabilitadasEntrada:
+      properties:
+        Token:
+          type: string
+          description: Token
+        Usuario:
+          type: string
+          description: Usuario
+    Api.v2.UsuarioObtenerEmpresasHabilitadasSalida:
+      properties:
+        EjecucionOK:
+          type: boolean
+          description: Ejecucion OK
+        EjecucionMsg:
+          type: string
+          description: Ejecucion Msg
+        Empresas:
+          type: array
+          items:
+            $ref: '#/components/schemas/Api.v2.UsuarioObtenerEmpresasHabilitadasSalida.Empresas_Empresa'
+    Api.v2.UsuarioObtenerEmpresasHabilitadasSalida.Empresas_Empresa:
+      properties:
+        Codigo:
+          type: string
+          description: Codigo
+        Nombre:
+          type: string
+          description: Nombre
+      x-gx-level: UsuarioObtenerEmpresasHabilitadasSalida
