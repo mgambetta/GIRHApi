@@ -1,0 +1,716 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "GIRHApi",
+    "version": "20220728194302"
+  },
+  "servers": [
+    {
+      "url": "http://http://zona2.datalogic.com.uy:8083/GIRH_BandejaEntrada/Api/v2"
+    }
+  ],
+  "paths": {
+    "/Seguridad/Login": {
+      "post": {
+        "tags": [
+          "Seguridad"
+        ],
+        "operationId": "Seguridad.Login__post",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login__postInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LoginSalida"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/Seguridad/UsuarioObtenerEmpresasHabilitadas": {
+      "post": {
+        "tags": [
+          "Seguridad"
+        ],
+        "operationId": "Seguridad.UsuarioObtenerEmpresasHabilitadas__post",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsuarioObtenerEmpresasHabilitadas__postInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UsuarioObtenerEmpresasHabilitadasSalida"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/BandejaEntrada/FuncionarioABM": {
+      "post": {
+        "tags": [
+          "BandejaEntrada"
+        ],
+        "operationId": "BandejaEntrada.FuncionarioABM__post",
+        "summary": "FuncionarioABM__post",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FuncionarioABM__postInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BandejaEntrada.FuncionarioABMSalida"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/BandejaEntrada/FuncionarioCuentasBancariasABM": {
+      "post": {
+        "tags": [
+          "BandejaEntrada"
+        ],
+        "operationId": "BandejaEntrada.FuncionarioCuentasBancariasABM__post",
+        "summary": "FuncionarioCuentasBancariasABM__post",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FuncionarioCuentasBancariasABM__postInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BandejaEntrada.FuncionarioCuentasBancariasABMSalida"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/BandejaEntrada/FuncionarioPersonasACargoABM": {
+      "post": {
+        "tags": [
+          "BandejaEntrada"
+        ],
+        "operationId": "BandejaEntrada.FuncionarioPersonasACargoABM__post",
+        "summary": "FuncionarioPersonasACargoABM__post",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FuncionarioPersonasACargoABM__postInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BandejaEntrada.FuncionarioPersonasACargoABMSalida"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/BandejaEntrada/FuncionarioConyugueABM": {
+      "post": {
+        "tags": [
+          "BandejaEntrada"
+        ],
+        "operationId": "BandejaEntrada.FuncionarioConyugueABM__post",
+        "summary": "FuncionarioConyugueABM__post",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FuncionarioConyugueABM__postInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BandejaEntrada.FuncionarioConyugueABMSalida"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/BandejaEntrada/FuncionarioExperienciaLaboralABM": {
+      "post": {
+        "tags": [
+          "BandejaEntrada"
+        ],
+        "operationId": "BandejaEntrada.FuncionarioExperienciaLaboralABM__post",
+        "summary": "FuncionarioExperienciaLaboralABM__post",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FuncionarioExperienciaLaboralABM__postInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BandejaEntrada.FuncionarioExperienciaLaboralABMSalida"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/BandejaEntrada/FuncionarioAreasExperienciaABM": {
+      "post": {
+        "tags": [
+          "BandejaEntrada"
+        ],
+        "operationId": "BandejaEntrada.FuncionarioAreasExperienciaABM__post",
+        "summary": "FuncionarioAreasExperienciaABM__post",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FuncionarioAreasExperienciaABM__postInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BandejaEntrada.FuncionarioAreasExperienciaABMSalida"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/BandejaEntrada/FuncionarioFamiliaresABM": {
+      "post": {
+        "tags": [
+          "BandejaEntrada"
+        ],
+        "operationId": "BandejaEntrada.FuncionarioFamiliaresABM__post",
+        "summary": "FuncionarioFamiliaresABM__post",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FuncionarioFamiliaresABM__postInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BandejaEntrada.FuncionarioFamiliaresABMSalida"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/FichaFuncional/DatosFuncionario": {
+      "post": {
+        "tags": [
+          "FichaFuncional"
+        ],
+        "operationId": "Api.v2.FichaCentral.DatosFuncionario__post",
+        "summary": "DatosFuncionario__post",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DatosFuncionario__postInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FichaFuncional.DatosFuncionarioSalida"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Login__postInput": {
+        "properties": {
+          "LoginEntrada": {
+            "description": "Login Entrada",
+            "$ref": "#/components/schemas/LoginEntrada"
+          }
+        }
+      },
+      "UsuarioObtenerEmpresasHabilitadas__postInput": {
+        "properties": {
+          "UsuarioObtenerEmpresasHabilitadasEntrada": {
+            "description": "Usuario Obtener Empresas Habilitadas Entrada",
+            "$ref": "#/components/schemas/UsuarioObtenerEmpresasHabilitadasEntrada"
+          }
+        }
+      },
+      "LoginEntrada": {
+        "properties": {
+          "Usuario": {
+            "description": "Usuario",
+            "type": "string"
+          },
+          "Password": {
+            "description": "Password",
+            "type": "string"
+          }
+        }
+      },
+      "LoginSalida": {
+        "properties": {
+          "EjecucionOk": {
+            "description": "Ejecucion Ok",
+            "type": "boolean"
+          },
+          "EjecucionMsg": {
+            "description": "Ejecucion Msg",
+            "type": "string"
+          },
+          "Token": {
+            "description": "Token",
+            "type": "string"
+          }
+        }
+      },
+      "UsuarioObtenerEmpresasHabilitadasEntrada": {
+        "properties": {
+          "Token": {
+            "description": "Token",
+            "type": "string"
+          },
+          "Usuario": {
+            "description": "Usuario",
+            "type": "string"
+          }
+        }
+      },
+      "UsuarioObtenerEmpresasHabilitadasSalida": {
+        "properties": {
+          "EjecucionOK": {
+            "description": "Ejecucion OK",
+            "type": "boolean"
+          },
+          "EjecucionMsg": {
+            "description": "Ejecucion Msg",
+            "type": "string"
+          },
+          "Empresas": {
+            "type": "array",
+            "items": {
+              "description": "Empresa",
+              "$ref": "#/components/schemas/UsuarioObtenerEmpresasHabilitadasSalida.Empresas_Empresa"
+            }
+          }
+        }
+      },
+      "UsuarioObtenerEmpresasHabilitadasSalida.Empresas_Empresa": {
+        "properties": {
+          "Codigo": {
+            "description": "Codigo",
+            "type": "string"
+          },
+          "Nombre": {
+            "description": "Nombre",
+            "type": "string"
+          }
+        },
+        "x-gx-level": "UsuarioObtenerEmpresasHabilitadasSalida"
+      },
+      "FuncionarioABM__postInput": {
+        "properties": {
+          "FuncionarioABMEntrada": {
+            "description": "Funcionario ABMEntrada",
+            "$ref": "#/components/schemas/BandejaEntrada.FuncionarioABMEntrada"
+          }
+        }
+      },
+      "FuncionarioCuentasBancariasABM__postInput": {
+        "properties": {
+          "FuncionarioCuentasBancariasABMEntrada": {
+            "description": "Funcionario Cuentas Bancarias ABMEntrada",
+            "$ref": "#/components/schemas/BandejaEntrada.FuncionarioCuentasBancariasABMEntrada"
+          }
+        }
+      },
+      "FuncionarioPersonasACargoABM__postInput": {
+        "properties": {
+          "FuncionarioPersonasACargoABMEntrada": {
+            "description": "Funcionario Personas ACargo ABMEntrada",
+            "$ref": "#/components/schemas/BandejaEntrada.FuncionarioPersonasACargoABMEntrada"
+          }
+        }
+      },
+      "FuncionarioConyugueABM__postInput": {
+        "properties": {
+          "FuncionarioConyugueABMEntrada": {
+            "description": "Funcionario Conyugue ABMEntrada",
+            "$ref": "#/components/schemas/BandejaEntrada.FuncionarioConyugueABMEntrada"
+          }
+        }
+      },
+      "FuncionarioExperienciaLaboralABM__postInput": {
+        "properties": {
+          "FuncionarioExperienciaLaboralABMEntrada": {
+            "description": "Funcionario Experiencia Laboral ABMEntrada",
+            "$ref": "#/components/schemas/BandejaEntrada.FuncionarioExperienciaLaboralABMEntrada"
+          }
+        }
+      },
+      "FuncionarioAreasExperienciaABM__postInput": {
+        "properties": {
+          "FuncionarioAreasExperienciaABMEntrada": {
+            "description": "Funcionario Areas Experiencia ABMEntrada",
+            "$ref": "#/components/schemas/BandejaEntrada.FuncionarioAreasExperienciaABMEntrada"
+          }
+        }
+      },
+      "FuncionarioFamiliaresABM__postInput": {
+        "properties": {
+          "FuncionarioFamiliaresABMEntrada": {
+            "description": "Funcionario Familiares ABMEntrada",
+            "$ref": "#/components/schemas/BandejaEntrada.FuncionarioFamiliaresABMEntrada"
+          }
+        }
+      },
+      "BandejaEntrada.FuncionarioABMEntrada": {
+        "properties": {
+          "Token": {
+            "description": "Token",
+            "type": "string"
+          }
+        }
+      },
+      "BandejaEntrada.FuncionarioABMSalida": {
+        "properties": {
+          "EjecucionOK": {
+            "description": "Ejecucion OK",
+            "type": "boolean"
+          },
+          "EjecucionMsg": {
+            "description": "Ejecucion Msg",
+            "type": "string"
+          }
+        }
+      },
+      "BandejaEntrada.FuncionarioCuentasBancariasABMEntrada": {
+        "properties": {
+          "Token": {
+            "description": "Token",
+            "type": "string"
+          },
+          "Empresa": {
+            "description": "Empresa",
+            "type": "string"
+          },
+          "Usuario": {
+            "description": "Usuario",
+            "type": "string"
+          }
+        }
+      },
+      "BandejaEntrada.FuncionarioCuentasBancariasABMSalida": {
+        "properties": {
+          "EjecucionOK": {
+            "description": "Ejecucion OK",
+            "type": "boolean"
+          },
+          "EjecucionMsg": {
+            "description": "Ejecucion Msg",
+            "type": "string"
+          }
+        }
+      },
+      "BandejaEntrada.FuncionarioPersonasACargoABMEntrada": {
+        "properties": {
+          "Token": {
+            "description": "Token",
+            "type": "string"
+          }
+        }
+      },
+      "BandejaEntrada.FuncionarioPersonasACargoABMSalida": {
+        "properties": {
+          "EjecucionOK": {
+            "description": "Ejecucion OK",
+            "type": "boolean"
+          },
+          "EjecucionMsg": {
+            "description": "Ejecucion Msg",
+            "type": "string"
+          }
+        }
+      },
+      "BandejaEntrada.FuncionarioConyugueABMEntrada": {
+        "properties": {
+          "Token": {
+            "description": "Token",
+            "type": "string"
+          }
+        }
+      },
+      "BandejaEntrada.FuncionarioConyugueABMSalida": {
+        "properties": {
+          "EjecucionOK": {
+            "description": "Ejecucion OK",
+            "type": "boolean"
+          },
+          "EjecucionMsg": {
+            "description": "Ejecucion Msg",
+            "type": "string"
+          }
+        }
+      },
+      "BandejaEntrada.FuncionarioExperienciaLaboralABMEntrada": {
+        "properties": {
+          "Token": {
+            "description": "Token",
+            "type": "string"
+          }
+        }
+      },
+      "BandejaEntrada.FuncionarioExperienciaLaboralABMSalida": {
+        "properties": {
+          "EjecucionOK": {
+            "description": "Ejecucion OK",
+            "type": "boolean"
+          },
+          "EjecucionMsg": {
+            "description": "Ejecucion Msg",
+            "type": "string"
+          }
+        }
+      },
+      "BandejaEntrada.FuncionarioAreasExperienciaABMEntrada": {
+        "properties": {
+          "Token": {
+            "description": "Token",
+            "type": "string"
+          }
+        }
+      },
+      "BandejaEntrada.FuncionarioAreasExperienciaABMSalida": {
+        "properties": {
+          "EjecucionOK": {
+            "description": "Ejecucion OK",
+            "type": "boolean"
+          },
+          "EjecucionMsg": {
+            "description": "Ejecucion Msg",
+            "type": "string"
+          }
+        }
+      },
+      "BandejaEntrada.FuncionarioFamiliaresABMEntrada": {
+        "properties": {
+          "Token": {
+            "description": "Token",
+            "type": "string"
+          }
+        }
+      },
+      "BandejaEntrada.FuncionarioFamiliaresABMSalida": {
+        "properties": {
+          "EjecucionOK": {
+            "description": "Ejecucion OK",
+            "type": "boolean"
+          },
+          "EjecucionMsg": {
+            "description": "Ejecucion Msg",
+            "type": "string"
+          }
+        }
+      },
+      "DatosFuncionario__postInput": {
+        "properties": {
+          "DatosFuncionarioEntrada": {
+            "description": "Datos Funcionario Entrada",
+            "$ref": "#/components/schemas/FichaFuncional.DatosFuncionarioEntrada"
+          }
+        }
+      },
+      "FichaFuncional.DatosFuncionarioEntrada": {
+        "properties": {
+          "Empresa": {
+            "description": "Empresa",
+            "type": "string"
+          },
+          "Usuario": {
+            "description": "Usuario",
+            "type": "string"
+          },
+          "Tokken": {
+            "description": "Tokken",
+            "type": "string"
+          },
+          "FuncionarioInicial": {
+            "description": "Funcionario Inicial",
+            "type": "integer",
+            "format": "int64"
+          },
+          "FuncionarioFinal": {
+            "description": "Funcionario Final",
+            "type": "integer",
+            "format": "int64"
+          },
+          "SoloNoEgresados": {
+            "description": "Solo No Egresados",
+            "type": "string"
+          },
+          "RegistrosXPagina": {
+            "description": "Registros XPagina",
+            "type": "integer",
+            "format": "int32"
+          },
+          "NumeroPagina": {
+            "description": "Numero Pagina",
+            "type": "integer",
+            "format": "int32"
+          },
+          "IncluirFotos": {
+            "description": "Incluir fotos de funcioanrios",
+            "type": "boolean"
+          }
+        }
+      },
+      "FichaFuncional.DatosFuncionarioSalida": {
+        "properties": {
+          "Ok": {
+            "description": "Ok",
+            "type": "boolean"
+          },
+          "MsgDsc": {
+            "description": "Msg Dsc",
+            "type": "string"
+          },
+          "Json": {
+            "description": "Json",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
