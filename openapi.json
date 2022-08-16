@@ -14,7 +14,7 @@
     }
   ],
   "paths": {
-    "/Login": {
+    "/Seguridad/Login": {
       "post": {
         "tags": [
           "Seguridad"
@@ -48,7 +48,7 @@
         }
       }
     },
-    "/UsuarioObtenerEmpresasHabilitadas": {
+    "/Seguridad/UsuarioObtenerEmpresasHabilitadas": {
       "post": {
         "tags": [
           "Seguridad"
@@ -320,7 +320,7 @@
         }
       }
     },
-    "/DatosFuncionario": {
+    "/FichaCentral/DatosFuncionario": {
       "post": {
         "tags": [
           "FichaCentral"
@@ -354,7 +354,7 @@
         }
       }
     },
-    "/NovedadesSinLiquidacion": {
+    "/Nomina/NovedadesSinLiquidacion": {
       "post": {
         "tags": [
           "Nomina"
