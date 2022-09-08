@@ -14,74 +14,6 @@
     }
   ],
   "paths": {
-    "/Seguridad/Login": {
-      "post": {
-        "tags": [
-          "Seguridad"
-        ],
-        "operationId": "Api.v2.Seguridad.Login__post",
-        "summary": "Realiza el login",
-        "requestBody": {
-          "required": false,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Login__postInput"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Successful operation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Api.v2.LoginSalida"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found"
-          }
-        }
-      }
-    },
-    "/Seguridad/UsuarioObtenerEmpresasHabilitadas": {
-      "post": {
-        "tags": [
-          "Seguridad"
-        ],
-        "operationId": "Api.v2.Seguridad.UsuarioObtenerEmpresasHabilitadas__post",
-        "summary": "Obtiene todas las empresas habilitadas para el usuario consultado.",
-        "requestBody": {
-          "required": false,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UsuarioObtenerEmpresasHabilitadas__postInput"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Successful operation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Api.v2.UsuarioObtenerEmpresasHabilitadasSalida"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found"
-          }
-        }
-      }
-    },
     "/BandejaEntrada/FuncionarioABM": {
       "post": {
         "tags": [
@@ -320,19 +252,87 @@
         }
       }
     },
-    "/FichaCentral/DatosFuncionario": {
+    "/ControlHorario/ImportacionMarcasReloj": {
       "post": {
         "tags": [
-          "FichaCentral"
+          "ControlHorario"
         ],
-        "operationId": "Api.v2.FichaCentral.DatosFuncionario__post",
-        "summary": "Obtener datos de funcionarios",
+        "operationId": "Api.v2.ControlHorario.ImportacionMarcasReloj__post",
+        "summary": "ImportacionMarcasReloj__post",
         "requestBody": {
           "required": false,
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/DatosFuncionario__postInput"
+                "$ref": "#/components/schemas/ImportacionMarcasReloj__postInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Api.v2.ImportacionMarcasRelojSalida"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/ControlHorario/CalendarioFuncionarioAM": {
+      "post": {
+        "tags": [
+          "ControlHorario"
+        ],
+        "operationId": "Api.v2.ControlHorario.CalendarioFuncionarioAM__post",
+        "summary": "CalendarioFuncionarioAM__post",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CalendarioFuncionarioAM__postInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Api.v2.CalendarioFuncionario_ABMSalida"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/FichaCentral/DatosFuncionariosObtener": {
+      "post": {
+        "tags": [
+          "FichaCentral"
+        ],
+        "operationId": "Api.v2.FichaCentral.DatosFuncionariosObtener__post",
+        "summary": "Obtiene datos de funcionarios",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DatosFuncionariosObtener__postInput"
               }
             }
           }
@@ -354,19 +354,87 @@
         }
       }
     },
-    "/Nomina/NovedadesSinLiquidacion": {
+    "/FichaCentral/DatosFamiliaresObtener": {
       "post": {
         "tags": [
-          "Nomina"
+          "FichaCentral"
         ],
-        "operationId": "Api.v2.Nomina.NovedadesSinLiquidacion__post",
-        "summary": "Ingresa novedades a una liquidación",
+        "operationId": "Api.v2.FichaCentral.DatosFamiliaresObtener__post",
+        "summary": "Obtiene datos de los familiares asociados a funcionarios.",
         "requestBody": {
           "required": false,
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NovedadesSinLiquidacion__postInput"
+                "$ref": "#/components/schemas/DatosFamiliaresObtener__postInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Api.v2.DatosFamiliaresSalida"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/FichaCentral/DatosFuncionariosDocumentosObtener": {
+      "post": {
+        "tags": [
+          "FichaCentral"
+        ],
+        "operationId": "Api.v2.FichaCentral.DatosFuncionariosDocumentosObtener__post",
+        "summary": "Obtiene datos de los funcionarios junto con los documentos asociados al mismo. ",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DatosFuncionariosDocumentosObtener__postInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Api.v2.DatosFuncionariosDocumentosSalida"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/Nomina/NovedadesSinLiquidacionAlta": {
+      "post": {
+        "tags": [
+          "Nomina"
+        ],
+        "operationId": "Api.v2.Nomina.NovedadesSinLiquidacionAlta__post",
+        "summary": "NovedadesSinLiquidacionAlta__post",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NovedadesSinLiquidacionAlta__postInput"
               }
             }
           }
@@ -387,10 +455,290 @@
           }
         }
       }
+    },
+    "/Nomina/DatosFijosObtener": {
+      "post": {
+        "tags": [
+          "Nomina"
+        ],
+        "operationId": "Api.v2.Nomina.DatosFijosObtener__post",
+        "summary": "DatosFijosObtener__post",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DatosFijosObtener__postInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Api.v2.ObtenerDatosFijosSalida"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/Nomina/CuentasBancariasObtener": {
+      "post": {
+        "tags": [
+          "Nomina"
+        ],
+        "operationId": "Api.v2.Nomina.CuentasBancariasObtener__post",
+        "summary": "CuentasBancariasObtener__post",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CuentasBancariasObtener__postInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Api.v2.CuentasBancariasObtenerSalida"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/Seguridad/Login": {
+      "post": {
+        "tags": [
+          "Seguridad"
+        ],
+        "operationId": "Api.v2.Seguridad.Login__post",
+        "summary": "Login__post",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login__postInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Api.v2.LoginSalida"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/Seguridad/UsuarioObtenerEmpresasHabilitadas": {
+      "post": {
+        "tags": [
+          "Seguridad"
+        ],
+        "operationId": "Api.v2.Seguridad.UsuarioObtenerEmpresasHabilitadas__post",
+        "summary": "UsuarioObtenerEmpresasHabilitadas__post",
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsuarioObtenerEmpresasHabilitadas__postInput"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Api.v2.UsuarioObtenerEmpresasHabilitadasSalida"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
+      "FuncionarioABM__postInput": {
+        "properties": {
+          "DatosInvocacion": {
+            "description": "Datos Invocacion",
+            "$ref": "#/components/schemas/Api.v2.DatosInvocacion"
+          },
+          "FuncionarioABMEntrada": {
+            "description": "Funcionario ABMEntrada",
+            "$ref": "#/components/schemas/Api.v2.FuncionarioABMEntrada"
+          }
+        }
+      },
+      "FuncionarioCuentasBancariasABM__postInput": {
+        "properties": {
+          "DatosInvocacion": {
+            "description": "Datos Invocacion",
+            "$ref": "#/components/schemas/Api.v2.DatosInvocacion"
+          },
+          "FuncionarioCuentasBancariasABMEntrada": {
+            "description": "Funcionario Cuentas Bancarias ABMEntrada",
+            "$ref": "#/components/schemas/Api.v2.FuncionarioCuentasBancariasABMEntrada"
+          }
+        }
+      },
+      "FuncionarioPersonasACargoABM__postInput": {
+        "properties": {
+          "DatosInvocacion": {
+            "description": "Datos Invocacion",
+            "$ref": "#/components/schemas/Api.v2.DatosInvocacion"
+          },
+          "FuncionarioPersonasACargoABMEntrada": {
+            "description": "Funcionario Personas ACargo ABMEntrada",
+            "$ref": "#/components/schemas/Api.v2.FuncionarioPersonasACargoABMEntrada"
+          }
+        }
+      },
+      "FuncionarioConyugueABM__postInput": {
+        "properties": {
+          "DatosInvocacion": {
+            "description": "Datos Invocacion",
+            "$ref": "#/components/schemas/Api.v2.DatosInvocacion"
+          },
+          "FuncionarioConyugueABMEntrada": {
+            "description": "Funcionario Conyugue ABMEntrada",
+            "$ref": "#/components/schemas/Api.v2.FuncionarioConyugueABMEntrada"
+          }
+        }
+      },
+      "FuncionarioExperienciaLaboralABM__postInput": {
+        "properties": {
+          "DatosInvocacion": {
+            "description": "Datos Invocacion",
+            "$ref": "#/components/schemas/Api.v2.DatosInvocacion"
+          },
+          "FuncionarioExperienciaLaboralABMEntrada": {
+            "description": "Funcionario Experiencia Laboral ABMEntrada",
+            "$ref": "#/components/schemas/Api.v2.FuncionarioExperienciaLaboralABMEntrada"
+          }
+        }
+      },
+      "FuncionarioAreasExperienciaABM__postInput": {
+        "properties": {
+          "DatosInvocacion": {
+            "description": "Datos Invocacion",
+            "$ref": "#/components/schemas/Api.v2.DatosInvocacion"
+          },
+          "FuncionarioAreasExperienciaABMEntrada": {
+            "description": "Funcionario Areas Experiencia ABMEntrada",
+            "$ref": "#/components/schemas/Api.v2.FuncionarioAreasExperienciaABMEntrada"
+          }
+        }
+      },
+      "FuncionarioFamiliaresABM__postInput": {
+        "properties": {
+          "DatosInvocacion": {
+            "description": "Datos Invocacion",
+            "$ref": "#/components/schemas/Api.v2.DatosInvocacion"
+          },
+          "FuncionarioFamiliaresABMEntrada": {
+            "description": "Funcionario Familiares ABMEntrada",
+            "$ref": "#/components/schemas/Api.v2.FuncionarioFamiliaresABMEntrada"
+          }
+        }
+      },
+      "ImportacionMarcasReloj__postInput": {
+        "properties": {
+          "DatosInvocacion": {
+            "description": "Datos Invocacion",
+            "$ref": "#/components/schemas/Api.v2.DatosInvocacion"
+          },
+          "ImportacionMarcasRelojEntrada": {
+            "description": "Importacion Marcas Reloj Entrada",
+            "$ref": "#/components/schemas/Api.v2.ImportacionMarcasRelojEntrada"
+          }
+        }
+      },
+      "CalendarioFuncionarioAM__postInput": {
+        "properties": {
+          "DatosInvocacion": {
+            "description": "Datos Invocacion",
+            "$ref": "#/components/schemas/Api.v2.DatosInvocacion"
+          },
+          "CalendarioFuncionario_ABMEntrada": {
+            "description": "Calendario Funcionario_ABMEntrada",
+            "$ref": "#/components/schemas/Api.v2.CalendarioFuncionario_ABMEntrada"
+          }
+        }
+      },
+      "NovedadesSinLiquidacionAlta__postInput": {
+        "properties": {
+          "DatosInvocacion": {
+            "description": "Datos Invocacion",
+            "$ref": "#/components/schemas/Api.v2.DatosInvocacion"
+          },
+          "NovedadesSinLiquidacionEntrada": {
+            "description": "Novedades Sin Liquidacion Entrada",
+            "$ref": "#/components/schemas/Api.v2.NovedadesSinLiquidacionEntrada"
+          }
+        }
+      },
+      "DatosFijosObtener__postInput": {
+        "properties": {
+          "DatosInvocacion": {
+            "description": "Datos Invocacion",
+            "$ref": "#/components/schemas/Api.v2.DatosInvocacion"
+          },
+          "ObtenerDatosFijosEntrada": {
+            "description": "Obtener Datos Fijos Entrada",
+            "$ref": "#/components/schemas/Api.v2.ObtenerDatosFijosEntrada"
+          }
+        }
+      },
+      "CuentasBancariasObtener__postInput": {
+        "properties": {
+          "DatosInvocacion": {
+            "description": "Datos Invocacion",
+            "$ref": "#/components/schemas/Api.v2.DatosInvocacion"
+          },
+          "CuentasBancariasObtenerEntrada": {
+            "description": "Cuentas Bancarias Obtener Entrada",
+            "$ref": "#/components/schemas/Api.v2.CuentasBancariasObtenerEntrada"
+          }
+        }
+      },
       "Login__postInput": {
         "properties": {
           "LoginEntrada": {
@@ -401,25 +749,72 @@
       },
       "UsuarioObtenerEmpresasHabilitadas__postInput": {
         "properties": {
+          "DatosInvocacion": {
+            "description": "Datos Invocacion",
+            "$ref": "#/components/schemas/Api.v2.DatosInvocacion"
+          },
           "UsuarioObtenerEmpresasHabilitadasEntrada": {
             "description": "Usuario Obtener Empresas Habilitadas Entrada",
             "$ref": "#/components/schemas/Api.v2.UsuarioObtenerEmpresasHabilitadasEntrada"
           }
         }
       },
-      "Api.v2.LoginEntrada": {
+      "Api.v2.ImportacionMarcasRelojEntrada": {
         "properties": {
-          "Usuario": {
-            "description": "Usuario",
+          "Empresa": {
+            "description": "Empresa",
+            "type": "integer",
+            "format": "int32"
+          },
+          "Marcas": {
+            "type": "array",
+            "items": {
+              "description": "Marca",
+              "$ref": "#/components/schemas/Api.v2.ImportacionMarcasRelojEntrada.Marcas_Marca"
+            }
+          }
+        }
+      },
+      "Api.v2.ImportacionMarcasRelojEntrada.Marcas_Marca": {
+        "properties": {
+          "Numero": {
+            "description": "Numero",
+            "type": "integer",
+            "format": "int64"
+          },
+          "FuncionarioID": {
+            "description": "Funcionario ID",
             "type": "string"
           },
-          "Password": {
-            "description": "Password",
+          "MarcaFecha": {
+            "description": "Marca Fecha",
+            "type": "string"
+          },
+          "MarcaHora": {
+            "description": "Marca Hora",
+            "type": "string"
+          },
+          "MarcaTipo": {
+            "description": "Marca Tipo",
+            "type": "integer",
+            "format": "int32"
+          },
+          "RelojId": {
+            "description": "Reloj Id",
+            "type": "string"
+          }
+        },
+        "x-gx-level": "ImportacionMarcasRelojEntrada"
+      },
+      "Api.v2.DatosInvocacion": {
+        "properties": {
+          "Token": {
+            "description": "Token",
             "type": "string"
           }
         }
       },
-      "Api.v2.LoginSalida": {
+      "Api.v2.ImportacionMarcasRelojSalida": {
         "properties": {
           "EjecucionOk": {
             "description": "Ejecucion Ok",
@@ -429,118 +824,115 @@
             "description": "Ejecucion Msg",
             "type": "string"
           },
-          "Token": {
-            "description": "Token",
-            "type": "string"
+          "Mensajes": {
+            "type": "array",
+            "items": {
+              "description": "Mensaje",
+              "$ref": "#/components/schemas/Api.v2.ImportacionMarcasRelojSalida.Mensajes_Mensaje"
+            }
           }
         }
       },
-      "Api.v2.UsuarioObtenerEmpresasHabilitadasEntrada": {
+      "Api.v2.ImportacionMarcasRelojSalida.Mensajes_Mensaje": {
         "properties": {
-          "Token": {
-            "description": "Token",
+          "Tipo": {
+            "description": "Tipo",
+            "type": "integer",
+            "format": "int32"
+          },
+          "Descripcion": {
+            "description": "Descripcion",
+            "type": "string"
+          }
+        },
+        "x-gx-level": "ImportacionMarcasRelojSalida"
+      },
+      "Api.v2.CalendarioFuncionario_ABMEntrada": {
+        "properties": {
+          "Funcionarios": {
+            "type": "array",
+            "items": {
+              "description": "Funcionario",
+              "$ref": "#/components/schemas/Api.v2.CalendarioFuncionario_ABMEntrada.Funcionarios_Funcionario"
+            }
+          }
+        }
+      },
+      "Api.v2.CalendarioFuncionario_ABMEntrada.Funcionarios_Funcionario": {
+        "properties": {
+          "Actividad": {
+            "description": "Actividad",
+            "type": "integer",
+            "format": "int64"
+          },
+          "HorarioSalida": {
+            "description": "Horario Salida",
             "type": "string"
           },
-          "Usuario": {
-            "description": "Usuario",
+          "HorarioRetorno": {
+            "description": "Horario Retorno",
+            "type": "string"
+          },
+          "HorarioSalTran": {
+            "description": "Horario Sal Tran",
+            "type": "string"
+          },
+          "HorarioEntrada": {
+            "description": "Horario Entrada",
+            "type": "string"
+          },
+          "Horario": {
+            "description": "Horario",
+            "type": "integer",
+            "format": "int32"
+          },
+          "TipoDia": {
+            "description": "Tipo Dia",
+            "type": "integer",
+            "format": "int32"
+          },
+          "Fecha": {
+            "description": "Fecha",
+            "type": "string"
+          },
+          "Codigo": {
+            "description": "Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "Empresa": {
+            "description": "Empresa",
+            "type": "integer",
+            "format": "int32"
+          },
+          "Operacion": {
+            "description": "Operacion",
             "type": "string"
           }
-        }
+        },
+        "x-gx-level": "CalendarioFuncionario_ABMEntrada"
       },
-      "Api.v2.UsuarioObtenerEmpresasHabilitadasSalida": {
+      "Api.v2.CalendarioFuncionario_ABMSalida": {
         "properties": {
-          "EjecucionOK": {
-            "description": "Ejecucion OK",
+          "EjecucionOk": {
+            "description": "Ejecucion Ok",
             "type": "boolean"
           },
           "EjecucionMsg": {
             "description": "Ejecucion Msg",
             "type": "string"
           },
-          "Empresas": {
+          "Mensajes": {
+            "description": "Mensajes",
             "type": "array",
             "items": {
-              "description": "Empresa",
-              "$ref": "#/components/schemas/Api.v2.UsuarioObtenerEmpresasHabilitadasSalida.Empresas_Empresa"
+              "type": "string"
             }
-          }
-        }
-      },
-      "Api.v2.UsuarioObtenerEmpresasHabilitadasSalida.Empresas_Empresa": {
-        "properties": {
-          "Codigo": {
-            "description": "Codigo",
-            "type": "string"
-          },
-          "Nombre": {
-            "description": "Nombre",
-            "type": "string"
-          }
-        },
-        "x-gx-level": "UsuarioObtenerEmpresasHabilitadasSalida"
-      },
-      "FuncionarioABM__postInput": {
-        "properties": {
-          "FuncionarioABMEntrada": {
-            "description": "Funcionario ABMEntrada",
-            "$ref": "#/components/schemas/Api.v2.FuncionarioABMEntrada"
-          }
-        }
-      },
-      "FuncionarioCuentasBancariasABM__postInput": {
-        "properties": {
-          "FuncionarioCuentasBancariasABMEntrada": {
-            "description": "Funcionario Cuentas Bancarias ABMEntrada",
-            "$ref": "#/components/schemas/Api.v2.FuncionarioCuentasBancariasABMEntrada"
-          }
-        }
-      },
-      "FuncionarioPersonasACargoABM__postInput": {
-        "properties": {
-          "FuncionarioPersonasACargoABMEntrada": {
-            "description": "Funcionario Personas ACargo ABMEntrada",
-            "$ref": "#/components/schemas/Api.v2.FuncionarioPersonasACargoABMEntrada"
-          }
-        }
-      },
-      "FuncionarioConyugueABM__postInput": {
-        "properties": {
-          "FuncionarioConyugueABMEntrada": {
-            "description": "Funcionario Conyugue ABMEntrada",
-            "$ref": "#/components/schemas/Api.v2.FuncionarioConyugueABMEntrada"
-          }
-        }
-      },
-      "FuncionarioExperienciaLaboralABM__postInput": {
-        "properties": {
-          "FuncionarioExperienciaLaboralABMEntrada": {
-            "description": "Funcionario Experiencia Laboral ABMEntrada",
-            "$ref": "#/components/schemas/Api.v2.FuncionarioExperienciaLaboralABMEntrada"
-          }
-        }
-      },
-      "FuncionarioAreasExperienciaABM__postInput": {
-        "properties": {
-          "FuncionarioAreasExperienciaABMEntrada": {
-            "description": "Funcionario Areas Experiencia ABMEntrada",
-            "$ref": "#/components/schemas/Api.v2.FuncionarioAreasExperienciaABMEntrada"
-          }
-        }
-      },
-      "FuncionarioFamiliaresABM__postInput": {
-        "properties": {
-          "FuncionarioFamiliaresABMEntrada": {
-            "description": "Funcionario Familiares ABMEntrada",
-            "$ref": "#/components/schemas/Api.v2.FuncionarioFamiliaresABMEntrada"
           }
         }
       },
       "Api.v2.FuncionarioABMEntrada": {
         "properties": {
-          "Token": {
-            "description": "Token",
-            "type": "string"
-          },
           "Funcionarios": {
             "type": "array",
             "items": {
@@ -561,7 +953,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "Empresa": {
+          "EmpresaCodigo": {
             "description": "Empresa - Código",
             "type": "integer",
             "format": "int32"
@@ -576,7 +968,7 @@
             "type": "integer",
             "format": "int64"
           },
-          "NroFuncionario": {
+          "Codigo": {
             "description": "Funcionario",
             "type": "integer",
             "format": "int64"
@@ -1208,12 +1600,12 @@
       },
       "Api.v2.FuncionarioABMSalida.Funcionarios_Funcionario": {
         "properties": {
-          "Empresa": {
+          "EmpresaCodigo": {
             "description": "Empresa",
             "type": "integer",
             "format": "int32"
           },
-          "NroFuncionario": {
+          "Codigo": {
             "description": "Funcionario",
             "type": "integer",
             "format": "int64"
@@ -1262,10 +1654,6 @@
       },
       "Api.v2.FuncionarioCuentasBancariasABMEntrada": {
         "properties": {
-          "Token": {
-            "description": "Token",
-            "type": "string"
-          },
           "Funcionarios": {
             "type": "array",
             "items": {
@@ -1291,7 +1679,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "NroFuncionario": {
+          "Codigo": {
             "description": "Funcionario",
             "type": "integer",
             "format": "int64"
@@ -1370,7 +1758,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "NroFuncionario": {
+          "Codigo": {
             "description": "Numero Funcionario",
             "type": "integer",
             "format": "int64"
@@ -1434,10 +1822,6 @@
       },
       "Api.v2.FuncionarioPersonasACargoABMEntrada": {
         "properties": {
-          "Token": {
-            "description": "Token",
-            "type": "string"
-          },
           "Funcionarios": {
             "type": "array",
             "items": {
@@ -1463,7 +1847,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "NroFuncionario": {
+          "Codigo": {
             "description": "Código de Funcionario",
             "type": "integer",
             "format": "int64"
@@ -1602,7 +1986,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "NroFuncionario": {
+          "Codigo": {
             "description": "Código de Funcionario",
             "type": "integer",
             "format": "int64"
@@ -1641,10 +2025,6 @@
       },
       "Api.v2.FuncionarioConyugueABMEntrada": {
         "properties": {
-          "Token": {
-            "description": "Token",
-            "type": "string"
-          },
           "Funcionarios": {
             "type": "array",
             "items": {
@@ -1670,7 +2050,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "NroFuncionario": {
+          "Codigo": {
             "description": "Código de Funcionario",
             "type": "integer",
             "format": "int64"
@@ -1766,7 +2146,7 @@
       },
       "Api.v2.FuncionarioConyugueABMSalida.Funcionarios_Funcionario": {
         "properties": {
-          "NroFuncionario": {
+          "Codigo": {
             "description": "Código de Funcionario",
             "type": "integer",
             "format": "int64"
@@ -1810,10 +2190,6 @@
       },
       "Api.v2.FuncionarioExperienciaLaboralABMEntrada": {
         "properties": {
-          "Token": {
-            "description": "Token",
-            "type": "string"
-          },
           "Funcionarios": {
             "type": "array",
             "items": {
@@ -1848,7 +2224,7 @@
             "description": "Eliminar Si Error",
             "type": "string"
           },
-          "NroFuncionario": {
+          "Codigo": {
             "description": "Código funcionario",
             "type": "integer",
             "format": "int64"
@@ -1934,7 +2310,7 @@
       },
       "Api.v2.FuncionarioExperienciaLaboralABMSalida.Funcionarios_Funcionario": {
         "properties": {
-          "NroFuncionario": {
+          "Codigo": {
             "description": "Código funcionario",
             "type": "integer",
             "format": "int64"
@@ -1983,10 +2359,6 @@
       },
       "Api.v2.FuncionarioAreasExperienciaABMEntrada": {
         "properties": {
-          "Token": {
-            "description": "Token",
-            "type": "string"
-          },
           "Funcionarios": {
             "type": "array",
             "items": {
@@ -2021,7 +2393,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "NroFuncionario": {
+          "Codigo": {
             "description": "Código funcoinario",
             "type": "integer",
             "format": "int64"
@@ -2064,7 +2436,7 @@
       },
       "Api.v2.FuncionarioAreasExperienciaABMSalida.Funcionarios_Funcionario": {
         "properties": {
-          "NroFuncionario": {
+          "Codigo": {
             "description": "Código funcoinario",
             "type": "integer",
             "format": "int64"
@@ -2113,10 +2485,6 @@
       },
       "Api.v2.FuncionarioFamiliaresABMEntrada": {
         "properties": {
-          "Token": {
-            "description": "Token",
-            "type": "string"
-          },
           "Funcionarios": {
             "type": "array",
             "items": {
@@ -2142,7 +2510,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "NroFuncionario": {
+          "Codigo": {
             "description": "Código funcionario",
             "type": "integer",
             "format": "int64"
@@ -2245,7 +2613,7 @@
       },
       "Api.v2.FuncionarioFamiliaresABMSalida.Funcionarios_Funcionarios": {
         "properties": {
-          "NroFuncionario": {
+          "Codigo": {
             "description": "Código funcionario",
             "type": "integer",
             "format": "int64"
@@ -2292,11 +2660,39 @@
         },
         "x-gx-level": "FuncionarioFamiliaresABMSalida.Funcionarios"
       },
-      "DatosFuncionario__postInput": {
+      "DatosFuncionariosObtener__postInput": {
         "properties": {
+          "DatosInvocacion": {
+            "description": "Datos Invocacion",
+            "$ref": "#/components/schemas/Api.v2.DatosInvocacion"
+          },
           "DatosFuncionarioEntrada": {
             "description": "Datos Funcionario Entrada",
             "$ref": "#/components/schemas/Api.v2.DatosFuncionarioEntrada"
+          }
+        }
+      },
+      "DatosFamiliaresObtener__postInput": {
+        "properties": {
+          "DatosInvocacion": {
+            "description": "Datos Invocacion",
+            "$ref": "#/components/schemas/Api.v2.DatosInvocacion"
+          },
+          "DatosFamiliaresEntrada": {
+            "description": "Datos Familiares Entrada",
+            "$ref": "#/components/schemas/Api.v2.DatosFamiliaresEntrada"
+          }
+        }
+      },
+      "DatosFuncionariosDocumentosObtener__postInput": {
+        "properties": {
+          "DatosInvocacion": {
+            "description": "Datos Invocacion",
+            "$ref": "#/components/schemas/Api.v2.DatosInvocacion"
+          },
+          "DatosFuncionariosDocumentosEntrada": {
+            "description": "Datos Funcionarios Documentos Entrada",
+            "$ref": "#/components/schemas/Api.v2.DatosFuncionariosDocumentosEntrada"
           }
         }
       },
@@ -2308,10 +2704,6 @@
           },
           "Usuario": {
             "description": "Usuario",
-            "type": "string"
-          },
-          "Tokken": {
-            "description": "Tokken",
             "type": "string"
           },
           "FuncionarioInicial": {
@@ -2346,34 +2738,1050 @@
       },
       "Api.v2.DatosFuncionarioSalida": {
         "properties": {
-          "Ok": {
-            "description": "Ok",
+          "EjecucionOk": {
+            "description": "Ejecucion Ok",
             "type": "boolean"
           },
-          "MsgDsc": {
-            "description": "Msg Dsc",
+          "EjecucionMsg": {
+            "description": "Ejecucion Msg",
             "type": "string"
           },
-          "Json": {
-            "description": "Json",
-            "type": "string"
+          "Pagina": {
+            "description": "Pagina",
+            "type": "integer",
+            "format": "int32"
+          },
+          "TotalFuncionarios": {
+            "description": "Total Funcionarios",
+            "type": "integer",
+            "format": "int64"
+          },
+          "Funcionarios": {
+            "description": "SDT_Fun Obt Dat_Funcionario",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SDT_FunObtDat_Funcionario"
+            }
           }
         }
       },
-      "NovedadesSinLiquidacion__postInput": {
+      "Api.v2.DatosFamiliaresEntrada": {
         "properties": {
-          "NovedadesSinLiquidacionEntrada": {
-            "description": "Novedades Sin Liquidacion Entrada",
-            "$ref": "#/components/schemas/Api.v2.NovedadesSinLiquidacionEntrada"
+          "Funcionarios": {
+            "type": "array",
+            "items": {
+              "description": "Funcionario",
+              "$ref": "#/components/schemas/Api.v2.DatosFamiliaresEntrada.Funcionarios_Funcionario"
+            }
           }
         }
+      },
+      "Api.v2.DatosFamiliaresEntrada.Funcionarios_Funcionario": {
+        "properties": {
+          "Empresa": {
+            "description": "Empresa",
+            "type": "integer",
+            "format": "int32"
+          },
+          "Codigo": {
+            "description": "Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "RelacionCodigo": {
+            "description": "Relacion Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "SucrusalVigente": {
+            "description": "Sucrusal Vigente",
+            "type": "integer",
+            "format": "int32"
+          },
+          "DepartamentoVigente": {
+            "description": "Departamento Vigente",
+            "type": "integer",
+            "format": "int32"
+          },
+          "SeccionVigente": {
+            "description": "Seccion Vigente",
+            "type": "integer",
+            "format": "int32"
+          },
+          "DivisionVigente": {
+            "description": "Division Vigente",
+            "type": "integer",
+            "format": "int32"
+          },
+          "Sexo": {
+            "description": "Sexo",
+            "type": "string"
+          }
+        },
+        "x-gx-level": "DatosFamiliaresEntrada"
+      },
+      "Api.v2.DatosFamiliaresSalida": {
+        "properties": {
+          "EjecucionOk": {
+            "description": "Ejecucion Ok",
+            "type": "boolean"
+          },
+          "EjecucionMsg": {
+            "description": "Ejecucion Msg",
+            "type": "string"
+          },
+          "Familiares": {
+            "type": "array",
+            "items": {
+              "description": "Familiar",
+              "$ref": "#/components/schemas/Api.v2.DatosFamiliaresSalida.Familiares_Familiar"
+            }
+          }
+        }
+      },
+      "Api.v2.DatosFamiliaresSalida.Familiares_Familiar": {
+        "properties": {
+          "FuncionarioCodigo": {
+            "description": "Funcionario Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "Empresa": {
+            "description": "Empresa",
+            "type": "integer",
+            "format": "int32"
+          },
+          "RelacionCodigo": {
+            "description": "Relacion Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "FamiliarObservacion": {
+            "description": "Familiar Observacion",
+            "type": "string"
+          },
+          "PersonaCodigo": {
+            "description": "Persona Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "PaisDocumentoCodigo": {
+            "description": "Pais Documento Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "PersonaDocumento": {
+            "description": "Persona Documento",
+            "type": "string"
+          },
+          "PersonaPrimerNombre": {
+            "description": "Persona Primer Nombre",
+            "type": "string"
+          },
+          "PersonaSegundoNombre": {
+            "description": "Persona Segundo Nombre",
+            "type": "string"
+          },
+          "PersonaPrimerApellido": {
+            "description": "Persona Primer Apellido",
+            "type": "string"
+          },
+          "PersonaSegundoApellido": {
+            "description": "Persona Segundo Apellido",
+            "type": "string"
+          },
+          "PersonaFechaNacimiento": {
+            "description": "Persona Fecha Nacimiento",
+            "type": "string",
+            "format": "date"
+          },
+          "PersonaEdad": {
+            "description": "Persona Edad",
+            "type": "integer",
+            "format": "int32"
+          },
+          "PersonaSexo": {
+            "description": "Persona Sexo",
+            "type": "string"
+          },
+          "PersonaNacionalidadCodigo": {
+            "description": "Persona Nacionalidad Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "PersonaEstudianteActivo": {
+            "description": "Persona Estudiante Activo",
+            "type": "string"
+          },
+          "PersonaOcupacion": {
+            "description": "Persona Ocupacion",
+            "type": "string"
+          }
+        },
+        "x-gx-level": "DatosFamiliaresSalida"
+      },
+      "Api.v2.DatosFuncionariosDocumentosEntrada": {
+        "properties": {
+          "Empresa": {
+            "description": "Empresa",
+            "type": "integer",
+            "format": "int32"
+          },
+          "Funcionarios": {
+            "description": "Funcionarios",
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        }
+      },
+      "Api.v2.DatosFuncionariosDocumentosSalida": {
+        "properties": {
+          "EjecucionOk": {
+            "description": "Ejecucion Ok",
+            "type": "boolean"
+          },
+          "EjecucionMsg": {
+            "description": "Ejecucion Msg",
+            "type": "string"
+          },
+          "Funcionarios": {
+            "type": "array",
+            "items": {
+              "description": "Funcionario",
+              "$ref": "#/components/schemas/Api.v2.DatosFuncionariosDocumentosSalida.Funcionarios_Funcionario"
+            }
+          }
+        }
+      },
+      "Api.v2.DatosFuncionariosDocumentosSalida.Funcionarios_Funcionario": {
+        "properties": {
+          "NombreEstadoVigente": {
+            "description": "Nombre Estado Vigente",
+            "type": "string"
+          },
+          "EstadoVigente": {
+            "description": "Estado Vigente",
+            "type": "integer",
+            "format": "int32"
+          },
+          "CodigoCrest": {
+            "description": "Codigo Crest",
+            "type": "string"
+          },
+          "NombreCrest": {
+            "description": "Nombre Crest",
+            "type": "string"
+          },
+          "FuncionarioReportaIndirecta": {
+            "description": "Funcionario Reporta Indirecta",
+            "type": "integer",
+            "format": "int64"
+          },
+          "EmpresaFuncionarioReportaIndirecta": {
+            "description": "Empresa Funcionario Reporta Indirecta",
+            "type": "integer",
+            "format": "int32"
+          },
+          "FuncionarioReportaDirecta": {
+            "description": "Funcionario Reporta Directa",
+            "type": "integer",
+            "format": "int64"
+          },
+          "EmpresaFuncionarioReportaDirecta": {
+            "description": "Empresa Funcionario Reporta Directa",
+            "type": "integer",
+            "format": "int32"
+          },
+          "NombreMoneda": {
+            "description": "Nombre Moneda",
+            "type": "string"
+          },
+          "CodigoMoneda": {
+            "description": "Codigo Moneda",
+            "type": "integer",
+            "format": "int32"
+          },
+          "ObservacionesContrato": {
+            "description": "Observaciones Contrato",
+            "type": "string"
+          },
+          "CantidadMesesContrato": {
+            "description": "Cantidad Meses Contrato",
+            "type": "integer",
+            "format": "int32"
+          },
+          "FechaInicioContrato": {
+            "description": "Fecha Inicio Contrato",
+            "type": "string",
+            "format": "date"
+          },
+          "FechaFinContrato": {
+            "description": "Fecha Fin Contrato",
+            "type": "string",
+            "format": "date"
+          },
+          "TipoContratoNombre": {
+            "description": "Tipo Contrato Nombre",
+            "type": "string"
+          },
+          "TipoContratoCodigo": {
+            "description": "Tipo Contrato Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "DivisionCodigo": {
+            "description": "Division Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "NombrePuesto": {
+            "description": "Nombre Puesto",
+            "type": "string"
+          },
+          "PuestoVigente": {
+            "description": "Puesto Vigente",
+            "type": "integer",
+            "format": "int64"
+          },
+          "DisciplinaCodigo": {
+            "description": "Disciplina Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "EspecialidadCodigo": {
+            "description": "Especialidad Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "CategoriaNombre": {
+            "description": "Categoria Nombre",
+            "type": "string"
+          },
+          "CategoriaCodigo": {
+            "description": "Categoria Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "EstadisticaCodigo": {
+            "description": "Estadistica Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "GradoVigenteCodigo": {
+            "description": "Grado Vigente Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "GradoVigenteNombre": {
+            "description": "Grado Vigente Nombre",
+            "type": "string"
+          },
+          "NivelSalariaCodigo": {
+            "description": "Nivel Salaria Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "NivelSalarialNombre": {
+            "description": "Nivel Salarial Nombre",
+            "type": "string"
+          },
+          "UsuarioCodigo": {
+            "description": "Usuario Codigo",
+            "type": "string"
+          },
+          "NombreDivision": {
+            "description": "Nombre Division",
+            "type": "string"
+          },
+          "DivisionVigente": {
+            "description": "Division Vigente",
+            "type": "integer",
+            "format": "int32"
+          },
+          "TipoFuncionarioVigente": {
+            "description": "Tipo Funcionario Vigente",
+            "type": "string"
+          },
+          "DiasXMesVigente": {
+            "description": "Dias XMes Vigente",
+            "type": "integer",
+            "format": "int32"
+          },
+          "HorasXDiaVigente": {
+            "description": "Horas XDia Vigente",
+            "type": "number",
+            "format": "double"
+          },
+          "NombreUltimaBaja": {
+            "description": "Nombre Ultima Baja",
+            "type": "string"
+          },
+          "CodigoUltimaBaja": {
+            "description": "Codigo Ultima Baja",
+            "type": "integer",
+            "format": "int32"
+          },
+          "FechaUltimoEgreso": {
+            "description": "Fecha Ultimo Egreso",
+            "type": "string",
+            "format": "date"
+          },
+          "CausalBajaVigencia": {
+            "description": "Causal Baja Vigencia",
+            "type": "integer",
+            "format": "int32"
+          },
+          "FechaEgresoVigencia": {
+            "description": "Fecha Egreso Vigencia",
+            "type": "string",
+            "format": "date"
+          },
+          "FechaIngresoVigencia": {
+            "description": "Fecha Ingreso Vigencia",
+            "type": "string",
+            "format": "date"
+          },
+          "UltimaFechaCargo": {
+            "description": "Ultima Fecha Cargo",
+            "type": "string",
+            "format": "date"
+          },
+          "NombreCargo": {
+            "description": "Nombre Cargo",
+            "type": "string"
+          },
+          "CargoVigente": {
+            "description": "Cargo Vigente",
+            "type": "integer",
+            "format": "int32"
+          },
+          "CarneDeMenor": {
+            "description": "Carne De Menor",
+            "type": "string"
+          },
+          "VencimientoAntitetanica": {
+            "description": "Vencimiento Antitetanica",
+            "type": "string",
+            "format": "date"
+          },
+          "FechaAntiguedad": {
+            "description": "Fecha Antiguedad",
+            "type": "string",
+            "format": "date"
+          },
+          "UltimaFechaTipoEmpleado": {
+            "description": "Ultima Fecha Tipo Empleado",
+            "type": "string",
+            "format": "date"
+          },
+          "UltimaFechaCargaHoraria": {
+            "description": "Ultima Fecha Carga Horaria",
+            "type": "string",
+            "format": "date"
+          },
+          "UltimaFechaSucursal": {
+            "description": "Ultima Fecha Sucursal",
+            "type": "string",
+            "format": "date"
+          },
+          "UltimaFechaSeccion": {
+            "description": "Ultima Fecha Seccion",
+            "type": "string",
+            "format": "date"
+          },
+          "UltimaFechaDepartamento": {
+            "description": "Ultima Fecha Departamento",
+            "type": "string",
+            "format": "date"
+          },
+          "NombreSeccion": {
+            "description": "Nombre Seccion",
+            "type": "string"
+          },
+          "NombreSucursal": {
+            "description": "Nombre Sucursal",
+            "type": "string"
+          },
+          "NombreDepartamento": {
+            "description": "Nombre Departamento",
+            "type": "string"
+          },
+          "SeccionVigente": {
+            "description": "Seccion Vigente",
+            "type": "integer",
+            "format": "int64"
+          },
+          "SucursalVigente": {
+            "description": "Sucursal Vigente",
+            "type": "integer",
+            "format": "int64"
+          },
+          "DepartamentoVigente": {
+            "description": "Departamento Vigente",
+            "type": "integer",
+            "format": "int32"
+          },
+          "EsLiquidable": {
+            "description": "Es Liquidable",
+            "type": "string"
+          },
+          "VencimientoCarnetSalud": {
+            "description": "Vencimiento Carnet Salud",
+            "type": "string",
+            "format": "date"
+          },
+          "EmergenciaMovilNombre": {
+            "description": "Emergencia Movil Nombre",
+            "type": "string"
+          },
+          "EmergenciaMovilCodigo": {
+            "description": "Emergencia Movil Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "MutualistaNombre": {
+            "description": "Mutualista Nombre",
+            "type": "string"
+          },
+          "MutualistaCodigo": {
+            "description": "Mutualista Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "CarpetaBSENombre": {
+            "description": "Carpeta BSENombre",
+            "type": "string"
+          },
+          "CarpetaBSECodigo": {
+            "description": "Carpeta BSECodigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "AfapNombre": {
+            "description": "Afap Nombre",
+            "type": "string"
+          },
+          "AfapCodigo": {
+            "description": "Afap Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "CredencialCivica": {
+            "description": "Credencial Civica",
+            "type": "string"
+          },
+          "OrdenJerarquico": {
+            "description": "Orden Jerarquico",
+            "type": "integer",
+            "format": "int64"
+          },
+          "NombrePaisPasaporte": {
+            "description": "Nombre Pais Pasaporte",
+            "type": "string"
+          },
+          "CodigoPaisPasaporte": {
+            "description": "Codigo Pais Pasaporte",
+            "type": "integer",
+            "format": "int32"
+          },
+          "Pasaporte": {
+            "description": "Pasaporte",
+            "type": "string"
+          },
+          "NombrePaisCi": {
+            "description": "Nombre Pais Ci",
+            "type": "string"
+          },
+          "CodigoPaisCi": {
+            "description": "Codigo Pais Ci",
+            "type": "integer",
+            "format": "int32"
+          },
+          "CedulaExtranjera": {
+            "description": "Cedula Extranjera",
+            "type": "string"
+          },
+          "CedulaIdentidad": {
+            "description": "Cedula Identidad",
+            "type": "integer",
+            "format": "int64"
+          },
+          "NacionalidadNombre": {
+            "description": "Nacionalidad Nombre",
+            "type": "string"
+          },
+          "NacionalidadCodigo": {
+            "description": "Nacionalidad Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "EstadoFuncionarioNombre": {
+            "description": "Estado Funcionario Nombre",
+            "type": "string"
+          },
+          "EstadoFuncionarioCodigo": {
+            "description": "Estado Funcionario Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "Localidad": {
+            "description": "Localidad",
+            "type": "string"
+          },
+          "DepartamentoResidenciaDescripcion": {
+            "description": "Departamento Residencia Descripcion",
+            "type": "string"
+          },
+          "DepartamentoResidenciaCodigo": {
+            "description": "Departamento Residencia Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "InternoEmpresa": {
+            "description": "Interno Empresa",
+            "type": "string"
+          },
+          "Telefono": {
+            "description": "Telefono",
+            "type": "string"
+          },
+          "CodigoPostal": {
+            "description": "Codigo Postal",
+            "type": "integer",
+            "format": "int64"
+          },
+          "ZonaNombre": {
+            "description": "Zona Nombre",
+            "type": "string"
+          },
+          "ZonaCodigo": {
+            "description": "Zona Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "Esquina": {
+            "description": "Esquina",
+            "type": "string"
+          },
+          "Direccion": {
+            "description": "Direccion",
+            "type": "string"
+          },
+          "Hijos": {
+            "description": "Hijos",
+            "type": "integer",
+            "format": "int32"
+          },
+          "FechaCasamiento": {
+            "description": "Fecha Casamiento",
+            "type": "string",
+            "format": "date"
+          },
+          "PersonasCargo": {
+            "description": "Personas Cargo",
+            "type": "integer",
+            "format": "int32"
+          },
+          "EstadoCivil": {
+            "description": "Estado Civil",
+            "type": "string"
+          },
+          "Sexo": {
+            "description": "Sexo",
+            "type": "string"
+          },
+          "FechaNacimiento": {
+            "description": "Fecha Nacimiento",
+            "type": "string",
+            "format": "date"
+          },
+          "SegundoApellido": {
+            "description": "Segundo Apellido",
+            "type": "string"
+          },
+          "PrimerApellido": {
+            "description": "Primer Apellido",
+            "type": "string"
+          },
+          "SegundoNombre": {
+            "description": "Segundo Nombre",
+            "type": "string"
+          },
+          "PrimerNomre": {
+            "description": "Primer Nomre",
+            "type": "string"
+          },
+          "EmpresaNombre": {
+            "description": "Empresa Nombre",
+            "type": "string"
+          },
+          "Codigo": {
+            "description": "Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "PaisCodigo": {
+            "description": "Pais Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "PaisCodigoArea": {
+            "description": "Pais Codigo Area",
+            "type": "integer",
+            "format": "int32"
+          },
+          "Empresa": {
+            "description": "Empresa",
+            "type": "integer",
+            "format": "int32"
+          },
+          "Email": {
+            "description": "Email",
+            "type": "string"
+          },
+          "Documentos": {
+            "type": "array",
+            "items": {
+              "description": "Documento",
+              "$ref": "#/components/schemas/Api.v2.DatosFuncionariosDocumentosSalida.Funcionarios.Documentos_Documento"
+            }
+          }
+        },
+        "x-gx-level": "DatosFuncionariosDocumentosSalida"
+      },
+      "Api.v2.DatosFuncionariosDocumentosSalida.Funcionarios.Documentos_Documento": {
+        "properties": {
+          "DocumentoCodigo": {
+            "description": "Documento Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "DocumentoNombre": {
+            "description": "Documento Nombre",
+            "type": "string"
+          },
+          "DocumentoTipo": {
+            "description": "Documento Tipo",
+            "type": "integer",
+            "format": "int32"
+          },
+          "DocumentoPlazoVigencia": {
+            "description": "Documento Plazo Vigencia",
+            "type": "integer",
+            "format": "int64"
+          },
+          "CodigoPaisDocumento": {
+            "description": "Codigo Pais Documento",
+            "type": "integer",
+            "format": "int32"
+          },
+          "NombrePaisDocumento": {
+            "description": "Nombre Pais Documento",
+            "type": "string"
+          },
+          "DocumentoEstado": {
+            "description": "Documento Estado",
+            "type": "integer",
+            "format": "int32"
+          },
+          "DocumentoNumero": {
+            "description": "Documento Numero",
+            "type": "string"
+          },
+          "DocumentoFecha": {
+            "description": "Documento Fecha",
+            "type": "string",
+            "format": "date"
+          },
+          "DocumentoObservaciones": {
+            "description": "Documento Observaciones",
+            "type": "string"
+          },
+          "DocumentoFechaEmision": {
+            "description": "Documento Fecha Emision",
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "x-gx-level": "DatosFuncionariosDocumentosSalida.Funcionarios"
+      },
+      "SDT_FunObtDat_Funcionario": {
+        "properties": {
+          "Empresa": {
+            "description": "Empresa",
+            "type": "integer",
+            "format": "int32"
+          },
+          "Codigo": {
+            "description": "Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "NombreCompleto": {
+            "description": "Nombre Completo",
+            "type": "string"
+          },
+          "PrimerNombre": {
+            "description": "Primer Nombre",
+            "type": "string"
+          },
+          "SegundoNombre": {
+            "description": "Segundo Nombre",
+            "type": "string"
+          },
+          "PrimerApellido": {
+            "description": "Primer Apellido",
+            "type": "string"
+          },
+          "SegundoApellido": {
+            "description": "Segundo Apellido",
+            "type": "string"
+          },
+          "TipoFuncionario": {
+            "description": "Tipo Funcionario",
+            "type": "string"
+          },
+          "Liquidable": {
+            "description": "Liquidable?",
+            "type": "string"
+          },
+          "Usuario": {
+            "description": "Usuario",
+            "type": "string"
+          },
+          "FechaNacimiento": {
+            "description": "Fecha Nacimiento",
+            "type": "string"
+          },
+          "Cedula": {
+            "description": "Cedula",
+            "type": "integer",
+            "format": "int64"
+          },
+          "PaisCedulaCodigo": {
+            "description": "Pais Cedula Codigo",
+            "type": "integer",
+            "format": "int32"
+          },
+          "PaisCedulaNombre": {
+            "description": "Pais Cedula Nombre",
+            "type": "integer",
+            "format": "int32"
+          },
+          "Pasaporte": {
+            "description": "Pasaporte",
+            "type": "string"
+          },
+          "PaisPasaporteCodigo": {
+            "description": "Pais Pasaporte Codigo",
+            "type": "integer",
+            "format": "int32"
+          },
+          "PaisPasaporteNombre": {
+            "description": "Pais Pasaporte Nombre",
+            "type": "string"
+          },
+          "FechaIngreso": {
+            "description": "Fecha Ingreso",
+            "type": "string"
+          },
+          "FechaEgreso": {
+            "description": "Fecha Egreso",
+            "type": "string"
+          },
+          "FechaAntiguedad": {
+            "description": "Fecha Antiguedad",
+            "type": "string"
+          },
+          "FechaVencimientoCarneSalud": {
+            "description": "Fecha Vencimiento Carne Salud",
+            "type": "string"
+          },
+          "Direccion": {
+            "description": "Direccion",
+            "type": "string"
+          },
+          "EMail": {
+            "description": "EMail",
+            "type": "string"
+          },
+          "NumeroDeTelefono": {
+            "description": "Numero De Telefono",
+            "type": "string"
+          },
+          "NumeroDeInterno": {
+            "description": "Numero De Interno",
+            "type": "string"
+          },
+          "NumeroDeCelular": {
+            "description": "Numero de Celular",
+            "type": "string"
+          },
+          "DocumentoExtranjero": {
+            "description": "Documento Extranjero",
+            "type": "string"
+          },
+          "DepartamentoCodigo": {
+            "description": "Departamento Codigo",
+            "type": "integer",
+            "format": "int32"
+          },
+          "DepartamentoNombre": {
+            "description": "Departamento Nombre",
+            "type": "string"
+          },
+          "FechaIngresoDepartamento": {
+            "description": "Fecha Ingreso Departamento",
+            "type": "string"
+          },
+          "SucursalCodigo": {
+            "description": "Sucursal Codigo",
+            "type": "integer",
+            "format": "int32"
+          },
+          "SucursalNombre": {
+            "description": "Sucursal Nombre",
+            "type": "string"
+          },
+          "FechaIngresoSucursal": {
+            "description": "Fecha Ingreso Sucursal",
+            "type": "string"
+          },
+          "SeccionCodigo": {
+            "description": "Seccion Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "SeccionNombre": {
+            "description": "Seccion Nombre",
+            "type": "string"
+          },
+          "FechaIngresoSeccion": {
+            "description": "Fecha Ingreso Seccion",
+            "type": "string"
+          },
+          "CargoCodigo": {
+            "description": "Cargo Codigo",
+            "type": "integer",
+            "format": "int32"
+          },
+          "CargoNombre": {
+            "description": "Cargo Nombre",
+            "type": "string"
+          },
+          "FechaIngresoCargo": {
+            "description": "Fecha Ingreso Cargo",
+            "type": "string"
+          },
+          "DivisionCodigo": {
+            "description": "Division Codigo",
+            "type": "integer",
+            "format": "int32"
+          },
+          "DivisionNombre": {
+            "description": "Division Nombre",
+            "type": "string"
+          },
+          "FechaIngresoDivision": {
+            "description": "Fecha Ingreso Division",
+            "type": "string"
+          },
+          "CausalBajaCodigo": {
+            "description": "Causal Baja Codigo",
+            "type": "integer",
+            "format": "int32"
+          },
+          "CausalBajaNombre": {
+            "description": "Causal Baja Nombre",
+            "type": "string"
+          },
+          "TipoContratoCodigo": {
+            "description": "Tipo Contrato Codigo",
+            "type": "integer",
+            "format": "int32"
+          },
+          "TipoContratoNombre": {
+            "description": "Tipo Contrato Nombre",
+            "type": "string"
+          },
+          "FechaInicioContrato": {
+            "description": "Fecha Inicio Contrato",
+            "type": "string"
+          },
+          "FechaFinContrato": {
+            "description": "Fecha Fin Contrato",
+            "type": "string"
+          },
+          "DiasXMes": {
+            "description": "Dias X Mes",
+            "type": "integer",
+            "format": "int32"
+          },
+          "FechaCambioDias": {
+            "description": "Fecha Cambio Dias",
+            "type": "string"
+          },
+          "HorasXDia": {
+            "description": "Horas X Dia",
+            "type": "number",
+            "format": "double"
+          },
+          "FechaCambioHoras": {
+            "description": "Fecha Cambio Horas",
+            "type": "string"
+          },
+          "Foto": {
+            "description": "Foto Base64",
+            "type": "string"
+          },
+          "FotoNombre": {
+            "description": "Foto Nombre",
+            "type": "string"
+          },
+          "FotoTipo": {
+            "description": "Foto Tipo",
+            "type": "string"
+          },
+          "FotoExpOK": {
+            "description": "Foto Exportación OK",
+            "type": "boolean"
+          },
+          "FotoExpMsg": {
+            "description": "Foto Exportación Mensaje",
+            "type": "string"
+          },
+          "AtributosDinamicos": {
+            "type": "array",
+            "items": {
+              "description": "Atributo",
+              "$ref": "#/components/schemas/SDT_FunObtDat_Funcionario.AtributosDinamicos_Atributo"
+            }
+          }
+        }
+      },
+      "SDT_FunObtDat_Funcionario.AtributosDinamicos_Atributo": {
+        "properties": {
+          "CampoCodigo": {
+            "description": "Campo Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "CampoNombre": {
+            "description": "Campo Nombre",
+            "type": "string"
+          },
+          "CampoValor": {
+            "description": "Campo Valor",
+            "type": "string"
+          }
+        },
+        "x-gx-level": "SDT_FunObtDat_Funcionario"
       },
       "Api.v2.NovedadesSinLiquidacionEntrada": {
         "properties": {
-          "Token": {
-            "description": "Token",
-            "type": "string"
-          },
           "Empresa": {
             "description": "Empresa",
             "type": "integer",
@@ -2460,6 +3868,357 @@
         },
         "x-gx-level": "NovedadesSinLiquidacionSalida"
       },
+      "Api.v2.ObtenerDatosFijosEntrada": {
+        "properties": {
+          "Empresa": {
+            "description": "Empresa",
+            "type": "integer",
+            "format": "int32"
+          },
+          "FuncionarioInicial": {
+            "description": "Funcionario Inicial",
+            "type": "integer",
+            "format": "int64"
+          },
+          "FuncionarioFinal": {
+            "description": "Funcionario Final",
+            "type": "integer",
+            "format": "int64"
+          },
+          "SoloDatosVigentes": {
+            "description": "Solo Datos Vigentes",
+            "type": "string"
+          }
+        }
+      },
+      "Api.v2.ObtenerDatosFijosSalida": {
+        "properties": {
+          "EjecucionOk": {
+            "description": "Ejecucion Ok",
+            "type": "boolean"
+          },
+          "EjecucionMsg": {
+            "description": "Ejecucion Msg",
+            "type": "string"
+          },
+          "DatosFijos": {
+            "type": "array",
+            "items": {
+              "description": "DatoFijo",
+              "$ref": "#/components/schemas/Api.v2.ObtenerDatosFijosSalida.DatosFijos_DatoFijo"
+            }
+          }
+        },
+        "-Mensajes": {
+          "type": "array",
+          "items": {
+            "description": "Mensaje",
+            "$ref": "#/components/schemas/Api.v2.ObtenerDatosFijosSalida.Mensajes_Mensaje"
+          }
+        }
+      },
+      "Api.v2.ObtenerDatosFijosSalida.DatosFijos_DatoFijo": {
+        "properties": {
+          "Empresa": {
+            "description": "Empresa",
+            "type": "integer",
+            "format": "int32"
+          },
+          "FuncionarioCodigo": {
+            "description": "Funcionario Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "ActualizarDatos": {
+            "description": "Actualizar Datos",
+            "type": "integer",
+            "format": "int32"
+          },
+          "Conceptos": {
+            "type": "array",
+            "items": {
+              "description": "Concepto",
+              "$ref": "#/components/schemas/Api.v2.ObtenerDatosFijosSalida.DatosFijos.Conceptos_Concepto"
+            }
+          }
+        },
+        "x-gx-level": "ObtenerDatosFijosSalida"
+      },
+      "Api.v2.ObtenerDatosFijosSalida.DatosFijos.Conceptos_Concepto": {
+        "properties": {
+          "Codigo": {
+            "description": "Concepto Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "Nombre": {
+            "description": "Concepto Nombre",
+            "type": "string"
+          },
+          "UsaSecuencia": {
+            "description": "Concepto Usa Secuencia",
+            "type": "string"
+          },
+          "Secuencia": {
+            "description": "Concepto Secuencia",
+            "type": "integer",
+            "format": "int64"
+          },
+          "FechaInicial": {
+            "description": "Concepto Fecha Inicial",
+            "type": "string",
+            "format": "date"
+          },
+          "NumeroInicial": {
+            "description": "Concepto Numero Inicial",
+            "type": "integer",
+            "format": "int32"
+          },
+          "FechaFinal": {
+            "description": "Concepto Fecha Final",
+            "type": "string",
+            "format": "date"
+          },
+          "NumeroFinal": {
+            "description": "Concepto Numero Final",
+            "type": "integer",
+            "format": "int32"
+          },
+          "CodigoMoneda": {
+            "description": "Concepto Codigo Moneda",
+            "type": "integer",
+            "format": "int32"
+          },
+          "CodigoTipoConcepto": {
+            "description": "Concepto Tipo del Concepto",
+            "type": "integer",
+            "format": "int32"
+          },
+          "CodigoDepartamento": {
+            "description": "Datos Fijos Cód.Departamento",
+            "type": "integer",
+            "format": "int32"
+          },
+          "AbreviaturaDepartamento": {
+            "description": "Datos Fijos Abrev.Depto.",
+            "type": "string"
+          },
+          "CodigoSucursal": {
+            "description": "Datos Fijos Cód.Sucursal",
+            "type": "integer",
+            "format": "int32"
+          },
+          "AbreviaturaSucural": {
+            "description": "Datos Fijos Abrev.Sucursal",
+            "type": "string"
+          },
+          "CodigoSeccion": {
+            "description": "Datos Fijos Cód.Sección",
+            "type": "integer",
+            "format": "int64"
+          },
+          "AbreviaturaSeccion": {
+            "description": "Datos Fijos Abrev.Sección",
+            "type": "string"
+          },
+          "Cantidad": {
+            "description": "Datos Fijos Cantidad",
+            "type": "number",
+            "format": "double"
+          },
+          "Importe": {
+            "description": "Datos Fijos importe",
+            "type": "number",
+            "format": "double"
+          },
+          "ProximaCuota": {
+            "description": "Proxima Cuota",
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "x-gx-level": "ObtenerDatosFijosSalida.DatosFijos"
+      },
+      "Api.v2.ObtenerDatosFijosSalida.Mensajes_Mensaje": {
+        "properties": {
+          "Tipo": {
+            "description": "Tipo",
+            "type": "integer",
+            "format": "int32"
+          },
+          "Descripcion": {
+            "description": "Descripcion",
+            "type": "string"
+          }
+        },
+        "x-gx-level": "ObtenerDatosFijosSalida"
+      },
+      "Api.v2.CuentasBancariasObtenerEntrada": {
+        "properties": {
+          "Empresa": {
+            "description": "Empresa",
+            "type": "integer",
+            "format": "int32"
+          },
+          "Funcionarios": {
+            "description": "Funcionario",
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        }
+      },
+      "Api.v2.CuentasBancariasObtenerSalida": {
+        "properties": {
+          "EjecucionOk": {
+            "description": "Ejecucion Ok",
+            "type": "boolean"
+          },
+          "EjecucionMsg": {
+            "description": "Ejecucion Msg",
+            "type": "string"
+          },
+          "Funcionarios": {
+            "type": "array",
+            "items": {
+              "description": "Funcionario",
+              "$ref": "#/components/schemas/Api.v2.CuentasBancariasObtenerSalida.Funcionarios_Funcionario"
+            }
+          }
+        }
+      },
+      "Api.v2.CuentasBancariasObtenerSalida.Funcionarios_Funcionario": {
+        "properties": {
+          "FuncionarioCodigo": {
+            "description": "Funcionario Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "RequiereTransferenciaOtroBanco": {
+            "description": "Requiere Transferencia Otro Banco",
+            "type": "string"
+          },
+          "Cuentas": {
+            "type": "array",
+            "items": {
+              "description": "Cuenta",
+              "$ref": "#/components/schemas/Api.v2.CuentasBancariasObtenerSalida.Funcionarios.Cuentas_Cuenta"
+            }
+          }
+        },
+        "-CuentasTransferencias": {
+          "type": "array",
+          "items": {
+            "description": "CuentaTransferencia",
+            "$ref": "#/components/schemas/Api.v2.CuentasBancariasObtenerSalida.Funcionarios.CuentasTransferencias_CuentaTransferencia"
+          }
+        },
+        "x-gx-level": "CuentasBancariasObtenerSalida"
+      },
+      "Api.v2.CuentasBancariasObtenerSalida.Funcionarios.Cuentas_Cuenta": {
+        "properties": {
+          "FechaIngresoBanco": {
+            "description": "Fecha Ingreso Banco",
+            "type": "string",
+            "format": "date"
+          },
+          "BancoCodigo": {
+            "description": "Banco Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "NumeroCuenta": {
+            "description": "Numero Cuenta",
+            "type": "integer",
+            "format": "int64"
+          },
+          "CuentaPorcentaje": {
+            "description": "Cuenta Porcentaje",
+            "type": "number",
+            "format": "double"
+          },
+          "CuentaImporte": {
+            "description": "Cuenta Importe",
+            "type": "number",
+            "format": "double"
+          },
+          "AgenciaCodigo": {
+            "description": "Agencia Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "TipoCuenta": {
+            "description": "Tipo Cuenta",
+            "type": "integer",
+            "format": "int64"
+          },
+          "SubCuenta": {
+            "description": "Sub Cuenta",
+            "type": "integer",
+            "format": "int32"
+          },
+          "FechaVigencia": {
+            "description": "Fecha Vigencia",
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "x-gx-level": "CuentasBancariasObtenerSalida.Funcionarios"
+      },
+      "Api.v2.CuentasBancariasObtenerSalida.Funcionarios.CuentasTransferencias_CuentaTransferencia": {
+        "properties": {
+          "FechaIngresoTransferencia": {
+            "description": "Fecha Ingreso Transferencia",
+            "type": "string",
+            "format": "date"
+          },
+          "BancoTransferenciaCodigo": {
+            "description": "Banco Transferencia Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "NumeroCuentaTransferencia": {
+            "description": "Numero Cuenta Transferencia",
+            "type": "integer",
+            "format": "int64"
+          },
+          "NombreBancoTransferencia": {
+            "description": "Nombre Banco Transferencia",
+            "type": "string"
+          },
+          "CodigoAgenciaTransferencia": {
+            "description": "Codigo Agencia Transferencia",
+            "type": "integer",
+            "format": "int32"
+          },
+          "NombreAgenciaTransferencia": {
+            "description": "Nombre Agencia Transferencia",
+            "type": "string"
+          },
+          "CodigoInternoAgenciaTransferencia": {
+            "description": "Codigo Interno Agencia Transferencia",
+            "type": "string"
+          },
+          "TipoCuentaTransferencia": {
+            "description": "Tipo Cuenta Transferencia",
+            "type": "integer",
+            "format": "int64"
+          },
+          "SubCuentaTransferencia": {
+            "description": "Sub Cuenta Transferencia",
+            "type": "integer",
+            "format": "int32"
+          },
+          "FechaVigenciaTransferencia": {
+            "description": "Fecha Vigencia Transferencia",
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "x-gx-level": "CuentasBancariasObtenerSalida.Funcionarios"
+      },
       "Api.v2.NovedadSinLiquidacion": {
         "properties": {
           "Funcionario": {
@@ -2508,6 +4267,74 @@
             "format": "int64"
           }
         }
+      },
+      "Api.v2.LoginEntrada": {
+        "properties": {
+          "Usuario": {
+            "description": "Usuario",
+            "type": "string"
+          },
+          "Password": {
+            "description": "Password",
+            "type": "string"
+          }
+        }
+      },
+      "Api.v2.LoginSalida": {
+        "properties": {
+          "EjecucionOk": {
+            "description": "Ejecucion Ok",
+            "type": "boolean"
+          },
+          "EjecucionMsg": {
+            "description": "Ejecucion Msg",
+            "type": "string"
+          },
+          "Token": {
+            "description": "Token",
+            "type": "string"
+          }
+        }
+      },
+      "Api.v2.UsuarioObtenerEmpresasHabilitadasEntrada": {
+        "properties": {
+          "Usuario": {
+            "description": "Usuario",
+            "type": "string"
+          }
+        }
+      },
+      "Api.v2.UsuarioObtenerEmpresasHabilitadasSalida": {
+        "properties": {
+          "EjecucionOK": {
+            "description": "Ejecucion OK",
+            "type": "boolean"
+          },
+          "EjecucionMsg": {
+            "description": "Ejecucion Msg",
+            "type": "string"
+          },
+          "Empresas": {
+            "type": "array",
+            "items": {
+              "description": "Empresa",
+              "$ref": "#/components/schemas/Api.v2.UsuarioObtenerEmpresasHabilitadasSalida.Empresas_Empresa"
+            }
+          }
+        }
+      },
+      "Api.v2.UsuarioObtenerEmpresasHabilitadasSalida.Empresas_Empresa": {
+        "properties": {
+          "Codigo": {
+            "description": "Codigo",
+            "type": "string"
+          },
+          "Nombre": {
+            "description": "Nombre",
+            "type": "string"
+          }
+        },
+        "x-gx-level": "UsuarioObtenerEmpresasHabilitadasSalida"
       }
     }
   }
