@@ -8,6 +8,7 @@ window.onload = function() {
     deepLinking: false,
     presets: [
       SwaggerUIBundle.presets.apis,
+	  defaultModelsExpandDepth: -1,
       SwaggerUIStandalonePreset.slice(1)
     ],
     plugins: [
