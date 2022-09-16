@@ -326,7 +326,7 @@
           "ControlHorario"
         ],
         "operationId": "Api.v2.ControlHorario.ExcepcionesFuncionariosABM__post",
-        "summary": "ExcepcionesFuncionariosABM__post",
+        "summary": "Permite realizar operaciones de alta, baja o modificación en las excepciones asociadas al horario del funcionario.",
         "requestBody": {
           "required": true,
           "content": {
@@ -360,7 +360,7 @@
           "FichaCentral"
         ],
         "operationId": "Api.v2.FichaCentral.DatosFuncionariosObtener__post",
-        "summary": "DatosFuncionariosObtener__post",
+        "summary": "Permite obtener todos los datos asociados a la ficha del funcionario.",
         "requestBody": {
           "required": true,
           "content": {
@@ -394,7 +394,7 @@
           "FichaCentral"
         ],
         "operationId": "Api.v2.FichaCentral.DatosFamiliaresObtener__post",
-        "summary": "DatosFamiliaresObtener__post",
+        "summary": "Permite obtener todos los datos de los familiares asociados a los funcionarios.",
         "requestBody": {
           "required": true,
           "content": {
@@ -428,7 +428,7 @@
           "FichaCentral"
         ],
         "operationId": "Api.v2.FichaCentral.DatosFuncionariosDocumentosObtener__post",
-        "summary": "DatosFuncionariosDocumentosObtener__post",
+        "summary": "Permite obtener todos los datos de los funcionarios incluyendo datos de los documentos asociados. ",
         "requestBody": {
           "required": true,
           "content": {
@@ -462,9 +462,9 @@
           "Nomina"
         ],
         "operationId": "Api.v2.Nomina.NovedadesSinLiquidacionesAlta__post",
-        "summary": "NovedadesSinLiquidacionesAlta__post",
+        "summary": "Permite registrar las novedades sin liquidación. ",
         "requestBody": {
-          "required": false,
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -496,9 +496,9 @@
           "Nomina"
         ],
         "operationId": "Api.v2.Nomina.DatosFijosObtener__post",
-        "summary": "DatosFijosObtener__post",
+        "summary": "Permite obtener los datos fijos asociados a los funcionarios.",
         "requestBody": {
-          "required": false,
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -530,9 +530,9 @@
           "Nomina"
         ],
         "operationId": "Api.v2.Nomina.CuentasBancariasFuncionariosObtener__post",
-        "summary": "CuentasBancariasFuncionariosObtener__post",
+        "summary": "Permite obtener las cuentas bancarias asociadas a los funcionarios.",
         "requestBody": {
-          "required": false,
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -564,9 +564,9 @@
           "Seguridad"
         ],
         "operationId": "Api.v2.Seguridad.Login__post",
-        "summary": "Login__post",
+        "summary": "Permite realizar la autenticación a la API, se retorna un Token de validación para utilizarse en las próximas invocaciones a servicios.",
         "requestBody": {
-          "required": false,
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -598,9 +598,9 @@
           "Seguridad"
         ],
         "operationId": "Api.v2.Seguridad.UsuarioObtenerEmpresasHabilitadas__post",
-        "summary": "UsuarioObtenerEmpresasHabilitadas__post",
+        "summary": "Permite obtener las empresas habilitadas para un funcionario determinado.",
         "requestBody": {
-          "required": false,
+          "required": true,
           "content": {
             "application/json": {
               "schema": {
@@ -3140,6 +3140,10 @@
             "type": "integer",
             "format": "int32"
           },
+          "EmpresaNombre": {
+            "description": "Empresa Nombre",
+            "type": "string"
+          },
           "FuncionarioCodigo": {
             "description": "Funcionario",
             "type": "integer",
@@ -3161,93 +3165,97 @@
             "description": "Segundo Nombre",
             "type": "string"
           },
-          "NombreEstadoVigente": {
-            "description": "Nombre Estado Vigente",
+          "CrestCodigo": {
+            "description": "Crest Codigo",
             "type": "string"
           },
-          "CodigoCrest": {
-            "description": "Codigo Crest",
+          "CrestNombre": {
+            "description": "Crest Nombre",
             "type": "string"
           },
-          "NombreCrest": {
-            "description": "Nombre Crest",
-            "type": "string"
-          },
-          "FuncionarioReportaIndirecta": {
-            "description": "Funcionario Reporta Indirecta",
+          "FuncionarioReportaIndirecto": {
+            "description": "Funcionario Reporta Indirecto",
             "type": "integer",
             "format": "int64"
           },
-          "EstadoVigente": {
-            "description": "Estado Vigente",
+          "EmpresaFuncionarioReportaIndirecto": {
+            "description": "Empresa Funcionario Reporta Indirecto",
             "type": "integer",
             "format": "int32"
           },
-          "EmpresaFuncionarioReportaIndirecta": {
-            "description": "Empresa Funcionario Reporta Indirecta",
-            "type": "integer",
-            "format": "int32"
-          },
-          "FuncionarioReportaDirecta": {
-            "description": "Funcionario Reporta Directa",
+          "FuncionarioReportaDirecto": {
+            "description": "Funcionario Reporta Directo",
             "type": "integer",
             "format": "int64"
           },
-          "EmpresaFuncionarioReportaDirecta": {
-            "description": "Empresa Funcionario Reporta Directa",
+          "EmpresaFuncionarioReportaDirecto": {
+            "description": "Empresa Funcionario Reporta Directo",
             "type": "integer",
             "format": "int32"
           },
-          "NombreMoneda": {
-            "description": "Nombre Moneda",
+          "EstadoCodigo": {
+            "description": "Estado Codigo",
+            "type": "integer",
+            "format": "int32"
+          },
+          "EstadoNombre": {
+            "description": "Estado Nombre",
             "type": "string"
           },
-          "CodigoMoneda": {
-            "description": "Codigo Moneda",
+          "MonedaCodigo": {
+            "description": "Moneda Codigo",
             "type": "integer",
             "format": "int32"
           },
-          "ObservacionesContrato": {
-            "description": "Observaciones Contrato",
+          "MonedaNombre": {
+            "description": "Moneda Nombre",
             "type": "string"
           },
-          "CantidadMesesContrato": {
-            "description": "Cantidad Meses Contrato",
+          "ContratoCantidadMeses": {
+            "description": "Contrato Cantidad Meses",
             "type": "integer",
             "format": "int32"
           },
-          "FechaInicioContrato": {
-            "description": "Fecha Inicio Contrato",
+          "ContratoObservaciones": {
+            "description": "Contrato Observaciones",
+            "type": "string"
+          },
+          "ContratoFechaInicio": {
+            "description": "Contrato Fecha Inicio",
             "type": "string",
             "format": "date"
           },
-          "FechaFinContrato": {
-            "description": "Fecha Fin Contrato",
+          "ContratoFechaFin": {
+            "description": "Contrato Fecha Fin",
             "type": "string",
             "format": "date"
-          },
-          "TipoContratoNombre": {
-            "description": "Tipo Contrato Nombre",
-            "type": "string"
           },
           "TipoContratoCodigo": {
             "description": "Tipo Contrato Codigo",
             "type": "integer",
             "format": "int64"
           },
+          "TipoContratoNombre": {
+            "description": "Tipo Contrato Nombre",
+            "type": "string"
+          },
           "DivisionCodigo": {
             "description": "Division Codigo",
             "type": "integer",
             "format": "int64"
           },
-          "NombrePuesto": {
-            "description": "Nombre Puesto",
+          "DivisionNombre": {
+            "description": "Division Nombre",
             "type": "string"
           },
-          "PuestoVigente": {
-            "description": "Puesto Vigente",
+          "PuestoCodigo": {
+            "description": "Puesto Codigo",
             "type": "integer",
             "format": "int64"
+          },
+          "PuestoNombre": {
+            "description": "Puesto Nombre",
+            "type": "string"
           },
           "DisciplinaCodigo": {
             "description": "Disciplina Codigo",
@@ -3259,27 +3267,27 @@
             "type": "integer",
             "format": "int64"
           },
-          "CategoriaNombre": {
-            "description": "Categoria Nombre",
-            "type": "string"
-          },
           "CategoriaCodigo": {
             "description": "Categoria Codigo",
             "type": "integer",
             "format": "int64"
+          },
+          "CategoriaNombre": {
+            "description": "Categoria Nombre",
+            "type": "string"
           },
           "EstadisticaCodigo": {
             "description": "Estadistica Codigo",
             "type": "integer",
             "format": "int64"
           },
-          "GradoVigenteCodigo": {
-            "description": "Grado Vigente Codigo",
+          "GradoCodigo": {
+            "description": "Grado Codigo",
             "type": "integer",
             "format": "int64"
           },
-          "GradoVigenteNombre": {
-            "description": "Grado Vigente Nombre",
+          "GradoNombre": {
+            "description": "Grado Nombre",
             "type": "string"
           },
           "NivelSalariaCodigo": {
@@ -3295,17 +3303,8 @@
             "description": "Usuario Codigo",
             "type": "string"
           },
-          "NombreDivision": {
-            "description": "Nombre Division",
-            "type": "string"
-          },
-          "DivisionVigente": {
-            "description": "Division Vigente",
-            "type": "integer",
-            "format": "int32"
-          },
-          "TipoFuncionarioVigente": {
-            "description": "Tipo Funcionario Vigente",
+          "TipoFuncionario": {
+            "description": "Tipo Funcionario",
             "type": "string"
           },
           "DiasXMesVigente": {
@@ -3318,55 +3317,55 @@
             "type": "number",
             "format": "double"
           },
-          "NombreUltimaBaja": {
-            "description": "Nombre Ultima Baja",
+          "UltimaBajaCodigo": {
+            "description": "Ultima Baja Codigo",
+            "type": "integer",
+            "format": "int32"
+          },
+          "UltimaBajaNombre": {
+            "description": "Ultima Baja Nombre",
             "type": "string"
           },
-          "CodigoUltimaBaja": {
-            "description": "Codigo Ultima Baja",
+          "UltimoEgresoFecha": {
+            "description": "Ultimo Egreso Fecha",
+            "type": "string",
+            "format": "date"
+          },
+          "CausalBajaCodigo": {
+            "description": "Causal Baja Codigo",
             "type": "integer",
             "format": "int32"
           },
-          "FechaUltimoEgreso": {
-            "description": "Fecha Ultimo Egreso",
+          "FechaEgreso": {
+            "description": "Fecha Egreso",
             "type": "string",
             "format": "date"
           },
-          "CausalBajaVigencia": {
-            "description": "Causal Baja Vigencia",
+          "FechaIngreso": {
+            "description": "Fecha Ingreso",
+            "type": "string",
+            "format": "date"
+          },
+          "CargoUltimaFecha": {
+            "description": "Cargo Ultima Fecha",
+            "type": "string",
+            "format": "date"
+          },
+          "CargoCodigo": {
+            "description": "Cargo Codigo",
             "type": "integer",
             "format": "int32"
           },
-          "FechaEgresoVigencia": {
-            "description": "Fecha Egreso Vigencia",
-            "type": "string",
-            "format": "date"
-          },
-          "FechaIngresoVigencia": {
-            "description": "Fecha Ingreso Vigencia",
-            "type": "string",
-            "format": "date"
-          },
-          "UltimaFechaCargo": {
-            "description": "Ultima Fecha Cargo",
-            "type": "string",
-            "format": "date"
-          },
-          "NombreCargo": {
-            "description": "Nombre Cargo",
+          "CargoNombre": {
+            "description": "Cargo Nombre",
             "type": "string"
-          },
-          "CargoVigente": {
-            "description": "Cargo Vigente",
-            "type": "integer",
-            "format": "int32"
           },
           "CarneDeMenor": {
             "description": "Carne De Menor",
             "type": "string"
           },
-          "VencimientoAntitetanica": {
-            "description": "Vencimiento Antitetanica",
+          "AntitetanicaVencimiento": {
+            "description": "Antitetanica Vencimiento",
             "type": "string",
             "format": "date"
           },
@@ -3375,55 +3374,55 @@
             "type": "string",
             "format": "date"
           },
-          "UltimaFechaTipoEmpleado": {
-            "description": "Ultima Fecha Tipo Empleado",
+          "TipoEmpleadoFechaIngreso": {
+            "description": "Tipo Empleado Fecha Ingreso",
             "type": "string",
             "format": "date"
           },
-          "UltimaFechaCargaHoraria": {
-            "description": "Ultima Fecha Carga Horaria",
+          "CargaHorariaFechaIngreso": {
+            "description": "Carga Horaria Fecha Ingreso",
             "type": "string",
             "format": "date"
           },
-          "UltimaFechaSucursal": {
-            "description": "Ultima Fecha Sucursal",
+          "SucursalFechaIngreso": {
+            "description": "Sucursal Fecha Ingreso",
             "type": "string",
             "format": "date"
           },
-          "UltimaFechaSeccion": {
-            "description": "Ultima Fecha Seccion",
+          "SeccionFechaIngreso": {
+            "description": "Seccion Fecha Ingreso",
             "type": "string",
             "format": "date"
           },
-          "UltimaFechaDepartamento": {
-            "description": "Ultima Fecha Departamento",
+          "DepartamentoFechaIngreso": {
+            "description": "Departamento Fecha Ingreso",
             "type": "string",
             "format": "date"
           },
-          "NombreSeccion": {
-            "description": "Nombre Seccion",
+          "SeccionNombre": {
+            "description": "Seccion Nombre",
             "type": "string"
           },
-          "NombreSucursal": {
-            "description": "Nombre Sucursal",
+          "SucursalNombre": {
+            "description": "Sucursal Nombre",
             "type": "string"
           },
-          "NombreDepartamento": {
-            "description": "Nombre Departamento",
+          "DepartamentoNombre": {
+            "description": "Departamento Nombre",
             "type": "string"
           },
-          "SeccionVigente": {
-            "description": "Seccion Vigente",
+          "SeccionCodigo": {
+            "description": "Seccion Codigo",
             "type": "integer",
             "format": "int64"
           },
-          "SucursalVigente": {
-            "description": "Sucursal Vigente",
+          "SucursalCodigo": {
+            "description": "Sucursal Codigo",
             "type": "integer",
             "format": "int64"
           },
-          "DepartamentoVigente": {
-            "description": "Departamento Vigente",
+          "DepartamentoCodigo": {
+            "description": "Departamento Codigo",
             "type": "integer",
             "format": "int32"
           },
@@ -3431,22 +3430,18 @@
             "description": "Es Liquidable",
             "type": "string"
           },
-          "VencimientoCarnetSalud": {
-            "description": "Vencimiento Carnet Salud",
+          "CarnetSaludVencimiento": {
+            "description": "Carnet Salud Vencimiento",
             "type": "string",
             "format": "date"
-          },
-          "EmergenciaMovilNombre": {
-            "description": "Emergencia Movil Nombre",
-            "type": "string"
           },
           "EmergenciaMovilCodigo": {
             "description": "Emergencia Movil Codigo",
             "type": "integer",
             "format": "int64"
           },
-          "MutualistaNombre": {
-            "description": "Mutualista Nombre",
+          "EmergenciaMovilNombre": {
+            "description": "Emergencia Movil Nombre",
             "type": "string"
           },
           "MutualistaCodigo": {
@@ -3454,8 +3449,8 @@
             "type": "integer",
             "format": "int64"
           },
-          "CarpetaBSENombre": {
-            "description": "Carpeta BSENombre",
+          "MutualistaNombre": {
+            "description": "Mutualista Nombre",
             "type": "string"
           },
           "CarpetaBSECodigo": {
@@ -3463,14 +3458,18 @@
             "type": "integer",
             "format": "int64"
           },
-          "AfapNombre": {
-            "description": "Afap Nombre",
+          "CarpetaBSENombre": {
+            "description": "Carpeta BSENombre",
             "type": "string"
           },
           "AfapCodigo": {
             "description": "Afap Codigo",
             "type": "integer",
             "format": "int64"
+          },
+          "AfapNombre": {
+            "description": "Afap Nombre",
+            "type": "string"
           },
           "CredencialCivica": {
             "description": "Credencial Civica",
@@ -3481,27 +3480,27 @@
             "type": "integer",
             "format": "int64"
           },
-          "NombrePaisPasaporte": {
-            "description": "Nombre Pais Pasaporte",
-            "type": "string"
-          },
-          "CodigoPaisPasaporte": {
-            "description": "Codigo Pais Pasaporte",
+          "PaisPasaporteCodigo": {
+            "description": "Pais Pasaporte Codigo",
             "type": "integer",
             "format": "int32"
+          },
+          "PaisPasaporteNombre": {
+            "description": "Pais Pasaporte Nombre",
+            "type": "string"
           },
           "Pasaporte": {
             "description": "Pasaporte",
             "type": "string"
           },
-          "NombrePaisCi": {
-            "description": "Nombre Pais Ci",
-            "type": "string"
-          },
-          "CodigoPaisCi": {
-            "description": "Codigo Pais Ci",
+          "PaisCiCodigo": {
+            "description": "Pais Ci Codigo",
             "type": "integer",
             "format": "int32"
+          },
+          "PaisCiNombre": {
+            "description": "Pais Ci Nombre",
+            "type": "string"
           },
           "CedulaExtranjera": {
             "description": "Cedula Extranjera",
@@ -3512,36 +3511,23 @@
             "type": "integer",
             "format": "int64"
           },
-          "NacionalidadNombre": {
-            "description": "Nacionalidad Nombre",
-            "type": "string"
-          },
           "NacionalidadCodigo": {
             "description": "Nacionalidad Codigo",
             "type": "integer",
             "format": "int64"
           },
-          "EstadoFuncionarioNombre": {
-            "description": "Estado Funcionario Nombre",
-            "type": "string"
-          },
-          "EstadoFuncionarioCodigo": {
-            "description": "Estado Funcionario Codigo",
-            "type": "integer",
-            "format": "int64"
-          },
-          "Localidad": {
-            "description": "Localidad",
-            "type": "string"
-          },
-          "DepartamentoResidenciaDescripcion": {
-            "description": "Departamento Residencia Descripcion",
+          "NacionalidadNombre": {
+            "description": "Nacionalidad Nombre",
             "type": "string"
           },
           "DepartamentoResidenciaCodigo": {
             "description": "Departamento Residencia Codigo",
             "type": "integer",
             "format": "int64"
+          },
+          "DepartamentoResidenciaNombre": {
+            "description": "Departamento Residencia Nombre",
+            "type": "string"
           },
           "InternoEmpresa": {
             "description": "Interno Empresa",
@@ -3565,26 +3551,40 @@
             "type": "integer",
             "format": "int64"
           },
+          "Direccion": {
+            "description": "Direccion",
+            "type": "string"
+          },
           "Esquina": {
             "description": "Esquina",
             "type": "string"
           },
-          "Direccion": {
-            "description": "Direccion",
+          "Localidad": {
+            "description": "Localidad",
             "type": "string"
+          },
+          "PaisCodigo": {
+            "description": "Pais Codigo",
+            "type": "integer",
+            "format": "int64"
+          },
+          "AreaPaisCodigo": {
+            "description": "Area Pais Codigo",
+            "type": "integer",
+            "format": "int32"
           },
           "Hijos": {
             "description": "Hijos",
             "type": "integer",
             "format": "int32"
           },
-          "FechaCasamiento": {
-            "description": "Fecha Casamiento",
+          "CasamientoFecha": {
+            "description": "Casamiento Fecha",
             "type": "string",
             "format": "date"
           },
-          "PersonasCargo": {
-            "description": "Personas Cargo",
+          "PersonasACargo": {
+            "description": "Personas ACargo",
             "type": "integer",
             "format": "int32"
           },
@@ -3600,20 +3600,6 @@
             "description": "Fecha Nacimiento",
             "type": "string",
             "format": "date"
-          },
-          "EmpresaNombre": {
-            "description": "Empresa Nombre",
-            "type": "string"
-          },
-          "PaisCodigo": {
-            "description": "Pais Codigo",
-            "type": "integer",
-            "format": "int64"
-          },
-          "PaisCodigoArea": {
-            "description": "Pais Codigo Area",
-            "type": "integer",
-            "format": "int32"
           },
           "Email": {
             "description": "Email",
