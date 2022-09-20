@@ -824,39 +824,39 @@
             "example": 92123456
           },
           "TurnoCodigo": {
-            "description": "Turno Código",
+            "description": "Código de turno",
             "type": "integer",
             "format": "int32",
             "example": 3
           },
           "TurnoNombre": {
-            "description": "Turno Nombre",
+            "description": "Nombre de Turno",
             "type": "string",
             "example": "Nocturno"
           },
           "OtroDocCodigo": {
-            "description": "Otro Documento Código",
+            "description": "Código de otro documento",
             "type": "integer",
             "format": "int64",
             "example": 2
           },
           "OtroDocNumero": {
-            "description": "Otro Documento Número",
+            "description": "Número de otro documento",
             "type": "string",
             "example": 950001585
           },
           "OtroDocNombre": {
-            "description": "Otro Documento Nombre",
+            "description": "Nombre de otro documento",
             "type": "string",
             "example": "DNI"
           },
           "OtroDocObservaciones": {
-            "description": "Otro Documento Observaciones",
+            "description": "Observaciones de otro documento",
             "type": "string",
             "example": "Documento Argentino."
           },
           "OtroDocVencimiento": {
-            "description": "Otro Documento Fecha Vencimiento",
+            "description": "Fecha de vencimiento de otro documento",
             "type": "string",
             "format": "date",
             "example": "2029-06-01T00:00:00.000Z"
@@ -867,7 +867,7 @@
             "example": "B1"
           },
           "Visa1Vencimiento": {
-            "description": "Visa 1 Fecha Vencimiento",
+            "description": "Fecha de vencimiento de visa 1",
             "type": "string",
             "format": "date",
             "example": "2028-02-01T00:00:00.000Z"
@@ -878,7 +878,7 @@
             "example": "B2"
           },
           "Visa2Vencimiento": {
-            "description": "Visa 2 Fecha Vencimiento",
+            "description": "Fecha de vencimiento de visa 2",
             "type": "string",
             "format": "date",
             "example": "2027-02-01T00:00:00.000Z"
@@ -889,7 +889,7 @@
             "example": "ZAB000254"
           },
           "Pasaporte1Vencimiento": {
-            "description": "Pasaporte 1 Fecha Vencimiento",
+            "description": "Fecha de vencimiento de pasaporte 1",
             "type": "string",
             "format": "date",
             "example": "2034-11-01T00:00:00.000Z"
@@ -900,58 +900,58 @@
             "example": "SAC2584412"
           },
           "Pasaporte2Vencimiento": {
-            "description": "Pasaporte 2 Fecha Vencimiento",
+            "description": "Fecha de vencimiento de pasaporte 2",
             "type": "string",
             "format": "date",
             "example": "2031-02-01T00:00:00.000Z"
           },
           "CedulaPaisCodigo": {
-            "description": "Pais Código CI o Extranjero",
+            "description": "Código país cédula",
             "type": "integer",
             "format": "int64",
             "example": 2
           },
           "CedulaPaisNombre": {
-            "description": "Pais Nombre CI o Extranjero",
+            "description": "Nombre país cédula",
             "type": "string",
             "example": "Argentina"
           },
           "Cedula": {
-            "description": "Cedula Identidad",
+            "description": "Cédula de identidad",
             "type": "integer",
             "format": "int64",
             "example": 43148502
           },
           "CedulaVencimiento": {
-            "description": "Cedula Identidad Fecha Vencimiento",
+            "description": "Fecha de vencimiento de cédula de identidad",
             "type": "string",
             "format": "date",
             "example": "2027-08-08T00:00:00.000Z"
           },
           "CedulaExtranjera": {
-            "description": "Cedula Identidad Extranjera",
+            "description": "Cédula de identidad extranjera",
             "type": "string",
             "example": 99509014
           },
           "CedulaExtranjeraVencimiento": {
-            "description": "Cedula Identidad Extranjera Fecha Vencimiento",
+            "description": "Fecha de vencimiento de cédula de identidad extranjera",
             "type": "string",
             "format": "date",
             "example": "2025-03-01T00:00:00.000Z"
           },
           "CredencialCivica": {
-            "description": "Credencial Cívica",
+            "description": "Credencial cívica",
             "type": "string",
             "example": "OGA8521"
           },
           "ZonaCodigo": {
-            "description": "Zona Código",
+            "description": "Código de zona",
             "type": "integer",
             "format": "int32",
             "example": 1
           },
           "ZonaNombre": {
-            "description": "Zona Nombre",
+            "description": "Nombre de zona",
             "type": "string",
             "example": "La Blanqueada"
           },
@@ -961,13 +961,13 @@
             "example": "Montevideo"
           },
           "DepartamentoResidenciaCodigo": {
-            "description": "Departamento Residencia Código",
+            "description": "Código de departamento de residencia",
             "type": "integer",
             "format": "int32",
             "example": 1
           },
           "DepartamentoResidenciaNombre": {
-            "description": "Departamento Residencia Descripción",
+            "description": "Descripción de departamento de residencia",
             "type": "string",
             "example": "Montevideo"
           },
@@ -1008,7 +1008,7 @@
             "example": 12
           },
           "TipoContratoNombre": {
-            "description": "Tipo de Contrato Nombre",
+            "description": "Nombre de tipo de contrato",
             "type": "string",
             "example": "90 días."
           },
@@ -1025,221 +1025,221 @@
             "example": "2035-01-01T00:00:00.000Z"
           },
           "FechaAntiguedad": {
-            "description": "Antiguedad",
+            "description": "Fecha de antigüedad",
             "type": "string",
             "format": "date",
             "example": "2022-06-01T00:00:00.000Z"
           },
           "NacionalidadCodigo": {
-            "description": "Nacionalidad Código",
+            "description": "Código de nacionalidad",
             "type": "integer",
             "format": "int32",
             "example": 1
           },
           "NacionalidadNombre": {
-            "description": "Nacionalidad Nombre",
+            "description": "Nombre de nacionalidad",
             "type": "string",
             "example": "Uruguayo"
           },
           "FechaNacimiento": {
-            "description": "Fecha Nacimiento",
+            "description": "Fecha de nacimiento",
             "type": "string",
             "format": "date",
             "example": "1987-07-11T00:00:00.000Z"
           },
           "CargaHoraria": {
-            "description": "Carga Horaria",
+            "description": "Carga horaria",
             "type": "number",
             "format": "double",
             "example": 45
           },
           "CargaHorariaFechaVigencia": {
-            "description": "Carga Horaria Fecha Vigencia",
+            "description": "Fecha de vigencia de carga horaria",
             "type": "string",
             "format": "date",
             "example": "2025-04-01T00:00:00.000Z"
           },
           "TipoEmpleadoCodigo": {
-            "description": "Tipo Empleado Código",
+            "description": "Código de tipo de empleado",
             "type": "string",
             "example": 3
           },
           "TipoEmpleadoFechaVigencia": {
-            "description": "Tipo Empleado Fecha Vigencia",
+            "description": "Fecha de vigencia de tipo de empleado",
             "type": "string",
             "format": "date",
             "example": "2026-10-01T00:00:00.000Z"
           },
           "EspecialidadCodigo": {
-            "description": "Especialidad Código",
+            "description": "Código de especialidad",
             "type": "string",
             "example": 2
           },
           "EspecialidadNombre": {
-            "description": "Especialidad Nombre",
+            "description": "Nombre de especialidad",
             "type": "string",
             "example": "Operario especializado."
           },
           "DisciplinaCodigo": {
-            "description": "Disciplina Código",
+            "description": "Código de disciplina",
             "type": "integer",
             "format": "int32",
             "example": 2
           },
           "DisciplinaNombre": {
-            "description": "Disciplina Nombre",
+            "description": "Nombre de disciplina",
             "type": "string",
             "example": "Disciplina"
           },
           "DivisionCodigo": {
-            "description": "División Código",
+            "description": "Código de división",
             "type": "integer",
             "format": "int32",
             "example": 2
           },
           "DivisionNombre": {
-            "description": "División Nombre",
+            "description": "Nombre de división",
             "type": "string",
             "example": "Administrativo"
           },
           "DivisionFechaVigencia": {
-            "description": "División Fecha Vigencia",
+            "description": "Fecha de vigencia de división",
             "type": "string",
             "format": "date",
             "example": "2024-05-01T00:00:00.000Z"
           },
           "CargoCodigo": {
-            "description": "Cargo Código",
+            "description": "Código de cargo",
             "type": "integer",
             "format": "int32",
             "example": 2
           },
           "CargoNombre": {
-            "description": "Cargo Nombre",
+            "description": "Nombre de cargo",
             "type": "string",
             "example": "Auxiliar contable"
           },
           "CargoFechaVigencia": {
-            "description": "Cargo Fecha Vigencia",
+            "description": "Fecha de vigencia de cargo",
             "type": "string",
             "format": "date",
             "example": "2024-05-07T00:00:00.000Z"
           },
           "GradoCodigo": {
-            "description": "Grado Código",
+            "description": "Código de grado",
             "type": "integer",
             "format": "int32",
             "example": 2
           },
           "GradoNombre": {
-            "description": "Grado Nombre",
+            "description": "Nombre de grado",
             "type": "string",
             "example": "Asistente"
           },
           "NivelSalarialCodigo": {
-            "description": "Nivel Salarial Código",
+            "description": "Código de vivel salarial",
             "type": "integer",
             "format": "int32",
             "example": 3
           },
           "NivelSalarialNombre": {
-            "description": "Nivel Salarial Nombre",
+            "description": "Nombre de nivel salarial",
             "type": "string",
             "example": "100%"
           },
           "NivelSalarialFechaVigencia": {
-            "description": "Grado Nivel Fecha Vigencia",
+            "description": "Fecha de vigencia de grado nivel",
             "type": "string",
             "format": "date",
             "example": "2025-07-02T00:00:00.000Z"
           },
           "DepartamentoCodigo": {
-            "description": "Departamento Código",
+            "description": "Código de departamento",
             "type": "integer",
             "format": "int32",
             "example": 4
           },
           "DepartamentoNombre": {
-            "description": "Departamento Nombre",
+            "description": "Nombre de departamento",
             "type": "string",
             "example": "Contable"
           },
           "DepartamentoFechaVigencia": {
-            "description": "Departamento Fecha Vigencia",
+            "description": "Fecha de vigencia de departamento",
             "type": "string",
             "format": "date",
             "example": "2022-05-07T00:00:00.000Z"
           },
           "SucursalCodigo": {
-            "description": "Sucursal Código",
+            "description": "Código de sucursal",
             "type": "integer",
             "format": "int32",
             "example": 5
           },
           "SucursalNombre": {
-            "description": "Sucursal Nombre",
+            "description": "Nombre de sucursal",
             "type": "string",
             "example": "Central"
           },
           "SucursalFechaVigencia": {
-            "description": "Sucursal Fecha vigencia",
+            "description": "Fecha de vigencia de sucursal",
             "type": "string",
             "format": "date",
             "example": "2027-07-01T00:00:00.000Z"
           },
           "SeccionCodigo": {
-            "description": "Sección Código",
+            "description": "Código de sección",
             "type": "integer",
             "format": "int64",
             "example": 4
           },
           "SeccionNombre": {
-            "description": "Sección/Estación Nombre",
+            "description": "Nombre de sección",
             "type": "string",
             "example": "Tesorería"
           },
           "SeccionFechaVigencia": {
-            "description": "Sección/Estación Fecha Vigencia",
+            "description": "Fecha de vigencia de sección",
             "type": "string",
             "format": "date",
             "example": "2027-01-01T00:00:00.000Z"
           },
           "CausalEgresoCodigo": {
-            "description": "Causal Egreso Codigo",
+            "description": "Código de causal de egreso",
             "type": "integer",
             "format": "int32",
             "example": 1
           },
           "CausalEgresoNombre": {
-            "description": "Causal Egreso Nombre",
+            "description": "Nombre de causal de egreso",
             "type": "string",
             "example": "Despido"
           },
           "FechaIngreso": {
-            "description": "Fecha de Ingreso",
+            "description": "Fecha de ingreso",
             "type": "string",
             "format": "date",
             "example": "2020-01-01T00:00:00.000Z"
           },
           "FechaEgreso": {
-            "description": "Fecha de Egreso",
+            "description": "Fecha de egreso",
             "type": "string",
             "format": "date",
             "example": "2024-02-01T00:00:00.000Z"
           },
           "EstadoCodigo": {
-            "description": "Estado Funcionario Código",
+            "description": "Código de estado  de funcionario",
             "type": "integer",
             "format": "int32",
             "example": 1
           },
           "EstadoNombre": {
-            "description": "Estado Funcionario Nombre",
+            "description": "Nombre de estado de funcionario",
             "type": "string",
             "example": "Activo"
           },
           "EstadoFechaVigencia": {
-            "description": "Fecha estado funcionario",
+            "description": "Fecha de estado de funcionario",
             "type": "string",
             "format": "date",
             "example": "2025-01-01T00:00:00.000Z"
@@ -1251,70 +1251,70 @@
             "example": 20
           },
           "CrestCodigo": {
-            "description": "Crest Código",
+            "description": "Código de Crest",
             "type": "string",
             "example": "CrestCod"
           },
           "CrestNombre": {
-            "description": "Crest Nombre",
+            "description": "Nombre de Crest",
             "type": "string",
             "example": "CrestNombre"
           },
           "CrestFechaVigencia": {
-            "description": "Crest Fecha vigente",
+            "description": "Fecha vigente de Crest",
             "type": "string",
             "format": "date",
             "example": "2025-04-08T00:00:00.000Z"
           },
           "ReportaDirectoEmpresa": {
-            "description": "Reporta directo empresa funcionario",
+            "description": "Código de empresa de funcionario reporta directo",
             "type": "integer",
             "format": "int32",
             "example": 25
           },
           "ReportaDirectoFuncionario": {
-            "description": "Reporta directo código funcionario",
+            "description": "Código de funcionario reporta directo",
             "type": "integer",
             "format": "int64",
             "example": 20
           },
           "ReportaDirectoFechaVigencia": {
-            "description": "Reporta directo fecha vigente",
+            "description": "Fecha vigente de reporta directo",
             "type": "string",
             "format": "date",
             "example": "2025-07-07T00:00:00.000Z"
           },
           "ReportaIndirectoEmpresa": {
-            "description": "Reporta indirecto empresa funcionario",
+            "description": "Código de empresa de funcionario reporta indirecto",
             "type": "integer",
             "format": "int32",
             "example": 20
           },
           "ReportaIndirectoFuncionario": {
-            "description": "Reporta indirecto código funcionario",
+            "description": "Código de funcionario reporta indirecto",
             "type": "integer",
             "format": "int64",
             "example": 18
           },
           "ReportaIndirectoFechaVigencia": {
-            "description": "Reporta indirecto fecha vigente",
+            "description": "Fecha vigente de reporta indirecto",
             "type": "string",
             "format": "date",
             "example": "2024-08-01T00:00:00.000Z"
           },
           "PuestoCodigo": {
-            "description": "Puesto Código",
+            "description": "Código de puesto",
             "type": "integer",
             "format": "int64",
             "example": 23
           },
           "PuestoNombre": {
-            "description": "Puesto Nombre",
+            "description": "Nombre de puesto",
             "type": "string",
             "example": "Tareas Adm."
           },
           "PuestoFechaVigencia": {
-            "description": "Fecha de vigencia puesto",
+            "description": "Fecha de vigencia de puesto",
             "type": "string",
             "format": "date",
             "example": "2023-05-01T00:00:00.000Z"
@@ -1335,13 +1335,13 @@
             "example": "S"
           },
           "AfapCodigo": {
-            "description": "Afap Codigo",
+            "description": "Código de afap",
             "type": "integer",
             "format": "int32",
             "example": 12
           },
           "AfapNombre": {
-            "description": "Afap Nombre",
+            "description": "Nombre de afap",
             "type": "string",
             "example": "República Afap"
           },
@@ -1352,7 +1352,7 @@
             "example": 1
           },
           "CarpetaNombre": {
-            "description": "Carpeta BSE Nombre",
+            "description": "Nombre de Carpeta BSE",
             "type": "string",
             "example": "BSE ALTO RIESGO-32304"
           },
@@ -1363,18 +1363,18 @@
             "example": 32
           },
           "MutualistaNombre": {
-            "description": "Mutualista Nombre",
+            "description": "Nombre de Mutualista",
             "type": "string",
             "example": "MUCAM"
           },
           "EmergenciaCodigo": {
-            "description": "Emergencia Movil Código",
+            "description": "Código de emergencia movil",
             "type": "integer",
             "format": "int32",
             "example": 2
           },
           "EmergenciaNombre": {
-            "description": "Emergencia Movil Nombre",
+            "description": "Nombre de emergencia movil",
             "type": "string",
             "example": "SEMM"
           },
@@ -1441,67 +1441,67 @@
             "example": "Sin antecedentes"
           },
           "DiasPorMes": {
-            "description": "Histórico de Dias por Mes",
+            "description": "Histórico de días por mes",
             "type": "integer",
             "format": "int32",
             "example": 20
           },
           "DiasPorMesFechaVigencia": {
-            "description": "Histórico de Dias Fecha de Cambio",
+            "description": "Histórico de días fecha de cambio",
             "type": "string",
             "format": "date",
             "example": "2025-08-01T00:00:00.000Z"
           },
           "BancoFechaIngreso": {
-            "description": "Fecha Ingreso Banco - Funcionario",
+            "description": "Fecha de ingreso de banco",
             "type": "string",
             "format": "date",
             "example": "2021-01-01T00:00:00.000Z"
           },
           "BancoCodigo": {
-            "description": "Banco - Funcionario",
+            "description": "Código de banco",
             "type": "integer",
             "format": "int32",
             "example": 1
           },
           "BancoAgenciaCodigo": {
-            "description": "Código Agencia - Funcionario",
+            "description": "Código de agencia",
             "type": "integer",
             "format": "int32",
             "example": 1
           },
           "BancoCuentaTipo": {
-            "description": "Tipo de Cuenta - Funcionario",
+            "description": "Tipo de Cuenta",
             "type": "integer",
             "format": "int64",
             "example": 1
           },
           "BancoCuentaNumero": {
-            "description": "Número de Cuenta - Funcionario",
+            "description": "Número de cuenta",
             "type": "integer",
             "format": "int64",
             "example": 18035017
           },
           "BancoSubCuentaNumero": {
-            "description": "Sub Cuenta - Funcionario",
+            "description": "Sub cuenta",
             "type": "integer",
             "format": "int32",
             "example": 231
           },
           "BancoCuentaPorcentaje": {
-            "description": "Porcentaje Cuenta - Funcionario",
+            "description": "Porcentaje de cuenta",
             "type": "number",
             "format": "double",
             "example": 100
           },
           "BancoCuentaImporte": {
-            "description": "Importe Cuenta - Funcionario",
+            "description": "Importe de cuenta",
             "type": "number",
             "format": "double",
             "example": 158772.25
           },
           "BancoFechaFinVigencia": {
-            "description": "Banco Fecha Fin Vigencia - Funcionario",
+            "description": "Fecha de fin de vigencia de banco",
             "type": "string",
             "format": "date",
             "example": "2028-05-01T00:00:00.000Z"
@@ -1512,12 +1512,12 @@
       "Api.v2.FuncionariosABMSalida": {
         "properties": {
           "EjecucionOK": {
-            "description": "Ejecucion OK",
+            "description": "Ejecución OK",
             "type": "boolean",
             "example": true
           },
           "EjecucionMsg": {
-            "description": "Ejecucion Msg",
+            "description": "Ejecución Msg",
             "type": "string",
             "example": "Ejecución correcta."
           },
@@ -1533,25 +1533,25 @@
       "Api.v2.FuncionariosABMSalida.Funcionarios_Funcionario": {
         "properties": {
           "EmpresaCodigo": {
-            "description": "Empresa",
+            "description": "Código de empresa",
             "type": "integer",
             "format": "int32",
             "example": 20
           },
           "Codigo": {
-            "description": "Funcionario",
+            "description": "Código de funcionario",
             "type": "integer",
             "format": "int64",
             "example": 1500
           },
           "BandejaCodigo": {
-            "description": "Bandeja",
+            "description": "Código de bandeja",
             "type": "integer",
             "format": "int64",
             "example": 15014
           },
           "BandejaSecuencial": {
-            "description": "Secuencial",
+            "description": "Secuencial de bandeja",
             "type": "integer",
             "format": "int64",
             "example": 1
@@ -1569,7 +1569,7 @@
           "Mensajes": {
             "type": "array",
             "items": {
-              "description": "Mensaje",
+              "description": "Colección de mensajes devueltos por el servicio",
               "$ref": "#/components/schemas/Api.v2.FuncionariosABMSalida.Funcionarios.Mensajes_Mensaje"
             }
           }
@@ -1579,13 +1579,13 @@
       "Api.v2.FuncionariosABMSalida.Funcionarios.Mensajes_Mensaje": {
         "properties": {
           "Tipo": {
-            "description": "Tipo",
+            "description": "Código de tipo de mensaje",
             "type": "integer",
             "format": "int32",
             "example": 1
           },
           "Descripcion": {
-            "description": "Descripcion",
+            "description": "Descripción del mensaje",
             "type": "string",
             "example": "Ejecución correcta"
           }
@@ -1635,7 +1635,7 @@
             "example": "2021-01-01T00:00:00.000Z"
           },
           "BancoCodigo": {
-            "description": "Funcionario Banco COdigo",
+            "description": "Código de banco",
             "type": "integer",
             "format": "int32",
             "example": 2
@@ -1763,7 +1763,7 @@
           "Mensajes": {
             "type": "array",
             "items": {
-              "description": "Mensaje",
+              "description": "Colección de mensajes devueltos por el servicio",
               "$ref": "#/components/schemas/Api.v2.FuncionariosCuentasBancariasABMSalida.FuncionariosCuentasBancarias.Mensajes_Mensaje"
             }
           }
@@ -1773,13 +1773,13 @@
       "Api.v2.FuncionariosCuentasBancariasABMSalida.FuncionariosCuentasBancarias.Mensajes_Mensaje": {
         "properties": {
           "Tipo": {
-            "description": "Tipo",
+            "description": "Código de tipo de mensaje",
             "type": "integer",
             "format": "int32",
             "example": 1
           },
           "Descripcion": {
-            "description": "Descripcion",
+            "description": "Descripción",
             "type": "string",
             "example": "Ejecución correcta."
           }
