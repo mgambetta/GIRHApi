@@ -3248,13 +3248,13 @@
       },
       "Api.v2.NovedadesSinLiquidacionesEntrada.NovedadesSinLiquidaciones_NovedadSinLiquidacion": {
         "properties": {
-          "CodigoFuncionario": {
+          "FuncionarioCodigo": {
             "description": "Código del funcionario",
             "type": "integer",
             "format": "int64",
             "example": 15014
           },
-          "Concepto": {
+          "ConceptoCodigo": {
             "description": "Código del concepto",
             "type": "integer",
             "format": "int64",
@@ -3284,19 +3284,19 @@
             "format": "double",
             "example": 1500
           },
-          "Departamento": {
+          "DepartamentoCodigo": {
             "description": "Código de departamento",
             "type": "integer",
             "format": "int32",
             "example": 1
           },
-          "Sucursal": {
+          "SucursalCodigo": {
             "description": "Código de sucursal",
             "type": "integer",
             "format": "int32",
             "example": 2
           },
-          "Seccion": {
+          "SeccionCodigo": {
             "description": "Código de Sección",
             "type": "integer",
             "format": "int64",
@@ -3428,7 +3428,7 @@
       },
       "Api.v2.DatosFijosObtenerSalida.DatosFijos_DatoFijo": {
         "properties": {
-          "Empresa": {
+          "EmpresaCodigo": {
             "description": "Código de la empresa",
             "type": "integer",
             "format": "int32",
@@ -3504,47 +3504,47 @@
             "format": "int32",
             "example": 120
           },
-          "CodigoMoneda": {
+          "MonedaCodigo": {
             "description": "Código de moneda del concepto",
             "type": "integer",
             "format": "int32",
             "example": 1
           },
-          "CodigoTipoConcepto": {
+          "TipoConceptoCodigo": {
             "description": "Código del tipo de concepto",
             "type": "integer",
             "format": "int32",
             "example": 15
           },
-          "CodigoDepartamento": {
+          "DepartamentoCodigo": {
             "description": "Código del departamento",
             "type": "integer",
             "format": "int32",
             "example": 4
           },
-          "AbreviaturaDepartamento": {
+          "DepartamentoAbreviatura": {
             "description": "Abreviatura del departamento",
             "type": "string",
             "example": "ADM"
           },
-          "CodigoSucursal": {
+          "SucursalCodigo": {
             "description": "Código de sucursal",
             "type": "integer",
             "format": "int32",
             "example": 12
           },
-          "AbreviaturaSucural": {
+          "SucuralAbreviatura": {
             "description": "Abreviatura de la sucursal",
             "type": "string",
             "example": "CTAL"
           },
-          "CodigoSeccion": {
+          "SeccionCodigo": {
             "description": "Código de la sección",
             "type": "integer",
             "format": "int64",
             "example": 13
           },
-          "AbreviaturaSeccion": {
+          "SeccionAbreviatura": {
             "description": "Abreviatura de la sección",
             "type": "string",
             "example": "TSR"
@@ -3898,9 +3898,9 @@
             "description": "Datos de invocación",
             "$ref": "#/components/schemas/Api.v2.DatosInvocacion"
           },
-          "FuncionariosFamiliaresEntrada": {
+          "FuncionariosFamiliaresObtenerEntrada": {
             "description": "Obtener familiares de funcionarios",
-            "$ref": "#/components/schemas/Api.v2.FuncionariosFamiliaresEntrada"
+            "$ref": "#/components/schemas/Api.v2.FuncionariosFamiliaresObtenerEntrada"
           }
         }
       },
@@ -3998,18 +3998,18 @@
           }
         }
       },
-      "Api.v2.FuncionariosFamiliaresEntrada": {
+      "Api.v2.FuncionariosFamiliaresObtenerEntrada": {
         "properties": {
           "FuncionariosFamiliares": {
             "type": "array",
             "items": {
               "description": "Obtiene familiares de funcionarios",
-              "$ref": "#/components/schemas/Api.v2.FuncionariosFamiliaresEntrada.FuncionariosFamiliares_FuncionarioFamiliar"
+              "$ref": "#/components/schemas/Api.v2.FuncionariosFamiliaresObtenerEntrada.FuncionariosFamiliares_FuncionarioFamiliar"
             }
           }
         }
       },
-      "Api.v2.FuncionariosFamiliaresEntrada.FuncionariosFamiliares_FuncionarioFamiliar": {
+      "Api.v2.FuncionariosFamiliaresObtenerEntrada.FuncionariosFamiliares_FuncionarioFamiliar": {
         "properties": {
           "EmpresaCodigo": {
             "description": "Código de la empresa",
@@ -4059,7 +4059,7 @@
             "example": "M"
           }
         },
-        "x-gx-level": "FuncionariosFamiliaresEntrada"
+        "x-gx-level": "FuncionariosFamiliaresObtenerEntrada"
       },
       "Api.v2.FuncionariosFamiliaresObtenerSalida": {
         "properties": {
